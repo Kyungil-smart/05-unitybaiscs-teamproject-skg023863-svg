@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/YDJ_Scene.unity
+    guid: 5bce0dbf3e0ec504597d5854c49eccb6
+  - enabled: 1
+    path: Assets/Scenes/MJY_Elevate_Scene.unity
+    guid: 45a378481eded6040a3a7abaa98d10aa
+  - enabled: 1
+    path: Assets/Scenes/LSL_Scenes.unity
+    guid: 88b51cf7b8aa72040ba18bcca58ce2c6
+  - enabled: 1
+    path: Assets/Scenes/KDH_testScene.unity
+    guid: f28a397584ff0e24a8e278b3654f2b69
+  - enabled: 1
+    path: Assets/Scenes/Workspace_Scene.unity
+    guid: f27b377b613ed1e4db5a263341859a98
+  - enabled: 1
+    path: Assets/Scene_HJO/PlayerCharacter.unity
+    guid: e9c4547e8ba4eae468689305d74d68d6
   m_configObjects: {}
