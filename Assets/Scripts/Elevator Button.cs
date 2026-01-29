@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ElevatorButton : MonoBehaviour
+public class ElevatorButton : MonoBehaviour, IInteractable
 {
-    private ElevatorController _elevatorController;
+    [SerializeField] private PlayerChoice choose;
 
-    //Todo : 플레이어 완성 후 상호작용 방식에 따라 재설계 필요
-    private void ButtonPushed()
+    private ElevatorController _elevatorController;
+    private GameManager _gamemanager;
+
+    public void Interact()
     {
         _elevatorController.ElevatorSequense();
+        _gamemanager.OnPlayerChoice(choose);
     }
 }
