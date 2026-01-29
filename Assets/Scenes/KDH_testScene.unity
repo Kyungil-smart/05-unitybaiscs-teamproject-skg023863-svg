@@ -280,56 +280,6 @@ LightingSettings:
   m_PVRTiledBaking: 0
   m_NumRaysToShootPerTexel: -1
   m_RespectSceneVisibilityWhenBakingGI: 0
---- !u!1 &1158410274
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1158410276}
-  - component: {fileID: 1158410275}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1158410275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158410274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d78eeeb00517ae94aa0145dfd53b7580, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _floorSystem: {fileID: 0}
-  _anomalyManager: {fileID: 1638556228}
-  _sceneFlowManager: {fileID: 0}
-  _elevatorTravelTime: 3
-  _startFloor: 10
-  _streakToClear: 3
---- !u!4 &1158410276
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158410274}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1450970964
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,58 +372,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 87.393, z: 0}
---- !u!1 &1638556227
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1638556229}
-  - component: {fileID: 1638556228}
-  m_Layer: 0
-  m_Name: AnomalyManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1638556228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638556227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1462ef98c18fab47a71a2a549041bce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _anomalySpawnChance: 1
-  _anomalyPrefabs:
-  - {fileID: 1800005054}
---- !u!4 &1638556229
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638556227}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1800005054 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3367431575743110138, guid: 98710f6bcd755fd478ad42128f017dc7, type: 3}
-  m_PrefabInstance: {fileID: 4619937271610450066}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2033622088
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +685,4 @@ SceneRoots:
   - {fileID: 3176495899746552375}
   - {fileID: 4619937271610450066}
   - {fileID: 5081461263261129371}
-  - {fileID: 1638556229}
-  - {fileID: 1158410276}
   - {fileID: 2033622093}
