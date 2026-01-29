@@ -151,9 +151,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78eeeb00517ae94aa0145dfd53b7580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anomalyManager: {fileID: 1355369362}
   _floorSystem: {fileID: 1493325923}
+  _anomalyManager: {fileID: 1355369362}
+  _sceneFlowManager: {fileID: 0}
   _elevatorTravelTime: 3
+  _startFloor: 10
+  _streakToClear: 3
 --- !u!4 &658865169
 Transform:
   m_ObjectHideFlags: 0
@@ -178,7 +181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 965332547}
-  - component: {fileID: 965332546}
+  - component: {fileID: 965332548}
   m_Layer: 0
   m_Name: SceneFlowManager
   m_TagString: Untagged
@@ -186,18 +189,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &965332546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965332545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2575729e0660fd47b67407344126e90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &965332547
 Transform:
   m_ObjectHideFlags: 0
@@ -213,6 +204,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &965332548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965332545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b649d67896554349a5a52fe0c09a5b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1076411817
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +341,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _anomalySpawnChance: 0.5
   _anomalyPrefabs: []
-  _spawnPoint: {fileID: 0}
 --- !u!4 &1355369363
 Transform:
   m_ObjectHideFlags: 0

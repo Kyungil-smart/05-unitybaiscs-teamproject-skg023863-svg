@@ -2,13 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
-모든 사운드 전담 매니저
-
-원칙
-- 다른 스크립트는 AudioSource를 직접 제어하지 않음
-- 사운드 변경은 여기서만 처리
-*/
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;

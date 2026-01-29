@@ -2,117 +2,101 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
-게임 전체 규칙 관리자 (컨트롤 타워)
-
-역할
-- 플레이어 선택 흐름 제어
-- 엘리베이터 이동 연출 타이밍 관리
-- 이상현상 판정 결과 처리
-- 층수 변경
-- 게임 클리어 판단 및 씬 전환
-
-중요
-- 실제 이동 연출은 엘리베이터 연출
-- 이 클래스는 "논리 흐름"만 담당
-*/
 public class GameManager : MonoBehaviour
 {
-	[SerializeField] private AnomalyManager _anomalyManager; // 이상현상 담당
-	[SerializeField] private FloorSystem _floorSystem;       // 층수 담당
-	[SerializeField] private float _elevatorTravelTime = 3.0f; // 이동 연출 시간
+    [Header("References")]
+    [SerializeField] private FloorSystem _floorSystem;
+    [SerializeField] private AnomalyManager _anomalyManager;
+    [SerializeField] private SceneFlowManager _sceneFlowManager;
 
-	private bool _isGameCleared; // 중복 입력 방지용 플래그
+    [Header("Settings")]
+    [SerializeField, Tooltip("엘리베이터 이동 연출 시간(초)")]
+    private float _elevatorTravelTime = 3.0f;
 
-	private void Start()
-	{
-		_isGameCleared = false;
+    [SerializeField, Tooltip("게임 시작 층")]
+    private int _startFloor = 10;
 
-		// 게임 시작 시 층수 초기화
-		_floorSystem.InitializeFloorSystem();
+    [SerializeField, Tooltip("연속 정답 횟수")]
+    private int _streakToClear = 3;
 
-		// 첫 판은 정상 섹션으로 시작
-		_anomalyManager.PrepareAnomalySection();
-	}
+    private int _currentStreak = 0;   // 연속 정답 카운트
+    private bool _isGameCleared = false;
 
-	/*
-	UI 버튼에서 호출
-	- 플레이어가 Up / Down 선택 시 진입점
+    // 게임 시작 시 초기화
+    private void Start()
+    {
+        _floorSystem.SetStartFloor(_startFloor); // 시작 층 설정
+
+        _floorSystem.InitializeFloorSystem(); // 현재 층을 시작 층으로 초기화
+
+        _anomalyManager.PrepareAnomalySection(); // 첫 층 이상현상 준비 → 첫 판은 정상 판
+    }
+
+    /*
+	엘리베이터 버튼 진입점
+	- Up / Down 버튼 클릭 시 호출
+	@param playerChoice : 플레이어 선택 값
 	*/
-	public void OnPlayerChoice(PlayerChoice playerChoice)
-	{
-		// 이미 클리어 상태면 입력 무시
-		if (_isGameCleared)
-		{
-			return;
-		}
+    public void OnPlayerChoice(PlayerChoice playerChoice)
+    {
+        if (_isGameCleared) return;
 
-		StartCoroutine(HandleElevatorSequence(playerChoice));
-	}
+        StartCoroutine(HandleElevatorSequence(playerChoice)); // 선택 처리 코루틴 시작
+    }
 
-	/*
-	엘리베이터 이동 + 판정 전체 흐름
-
-	이 코루틴은 "이동을 시킨다"기보다는
-	- 이동이 끝났다고 가정한 후
-	- 그 결과를 처리하는 논리 흐름임
+    /*
+	엘리베이터 이동 + 선택 처리
+	- 이동 대기
+	- 정답/오답 판정 후 층수 조정
+	- 연속 정답 달성 시 게임 클리어
 	*/
-	private IEnumerator HandleElevatorSequence(PlayerChoice playerChoice)
-	{
-		// 버튼 클릭음 + 이동 시작음
-		AudioManager.Instance.PlayButtonSound();
-		AudioManager.Instance.SetElevatorMoveSound(true);
+    private IEnumerator HandleElevatorSequence(PlayerChoice playerChoice)
+    {
+        // 버튼 클릭 + 이동 사운드 재생
+        AudioManager.Instance.PlayButtonSound();
+        AudioManager.Instance.SetElevatorMoveSound(true);
 
-		// 엘리베이터 이동 연출 대기
-		yield return new WaitForSeconds(_elevatorTravelTime);
+        yield return new WaitForSeconds(_elevatorTravelTime); // 엘리베이터 이동 연출 대기
 
-		// 이동 종료
-		AudioManager.Instance.SetElevatorMoveSound(false);
+        AudioManager.Instance.SetElevatorMoveSound(false); // 이동 종료
 
-		// 플레이어 선택 판정
-		bool isChoiceCorrect =
-			_anomalyManager.IsPlayerChoiceCorrect(playerChoice);
+        bool isCorrect = _anomalyManager.IsPlayerChoiceCorrect(playerChoice); // 선택 판정
 
-		// 판정 결과에 따른 층수 처리
-		if (isChoiceCorrect)
-		{
-			_floorSystem.GoDownOneFloor();
-		}
-		else
-		{
-			_floorSystem.ResetToStartFloor();
-		}
+        if (isCorrect)
+        {
+            // 정답: 한 층 하강 + 연속 정답 증가
+            _floorSystem.GoDownOneFloor();
+            _currentStreak++;
+        }
+        else
+        {
+            // 오답: 시작 층으로 리셋 + 연속 정답 초기화
+            _floorSystem.ResetToStartFloor();
+            _currentStreak = 0;
+        }
 
-		// 도착 효과음
-		AudioManager.Instance.PlayArrivalSound();
+        // 층 도착 사운드 재생
+        AudioManager.Instance.PlayArrivalSound();
 
-		// 게임 클리어 조건 확인
-		if (_floorSystem.CurrentFloor <= 1)
-		{
-			HandleGameClear();
-			yield break;
-		}
+        // 연속 정답 달성 시 게임 클리어 처리
+        if (_currentStreak >= _streakToClear)
+        {
+            HandleGameClear();
+            yield break;
+        }
 
-		// 다음 층 이상현상 준비
-		_anomalyManager.PrepareAnomalySection();
-	}
+        // 다음 층 이상현상 준비
+        _anomalyManager.PrepareAnomalySection();
+    }
 
-	/*
-	게임 클리어 처리
+    // 게임 클리어 처리
+    private void HandleGameClear()
+    {
+        _isGameCleared = true;
 
-	- 입력 차단
-	- 크레딧 씬 이동
-	*/
-	private void HandleGameClear()
-	{
-		_isGameCleared = true;
-
-		SceneFlowManager sceneFlowManager =
-			FindObjectOfType<SceneFlowManager>();
-
-		if (sceneFlowManager != null)
-		{
-			sceneFlowManager.LoadCredit();
-		}
-	}
+        if (_sceneFlowManager != null)
+        {
+            _sceneFlowManager.LoadCredit();
+        }
+    }
 }
