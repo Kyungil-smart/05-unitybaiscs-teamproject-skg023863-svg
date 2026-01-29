@@ -28,32 +28,24 @@ public class ElevatorController : MonoBehaviour
         _doorOpen = new WaitForSeconds(_aniController.animationClips[1].length);
     }
 
-
-    private void Update()
+    //Todo : 엘리베이터 버튼 연속으로 누를 때 예외처리 필요
+    public void ElevatorSequense()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) ElevatorSequense();
-    }
-
-    private void ElevatorSequense()
-    {
-        StartCoroutine(SequenseExecute(isClose));
-    }
-
-    IEnumerator SequenseExecute(bool state)
-    {
-        if (state)
+        if (isClose)
         {
-            
             _animator.SetBool("isClose", false);
             isClose = false;
-            yield return _doorOpen;
         }
         else
         {
             _animator.SetBool("isClose", true);
             isClose = true;
-            yield return _doorClose;
         }
+    }
+
+    /*IEnumerator SequenseExecute(bool state)
+    {
+        
         yield break;
     }
 
@@ -61,4 +53,5 @@ public class ElevatorController : MonoBehaviour
     {
         StopAllCoroutines();
     }
+    */
 }
