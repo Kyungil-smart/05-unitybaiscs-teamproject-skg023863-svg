@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - door
+  - button f4
+  - button f3
+  - button f2
+  - button f6
+  - button f5
   layers:
   - Default
   - TransparentFX

@@ -25,9 +25,9 @@ public class GameManager : MonoBehaviour
     // 게임 시작 시 초기화
     private void Start()
     {
-        _floorSystem.SetStartFloor(_startFloor); // 시작 층 설정
+        // _floorSystem.SetStartFloor(_startFloor); // 시작 층 설정
 
-        _floorSystem.InitializeFloorSystem(); // 현재 층을 시작 층으로 초기화
+        // _floorSystem.InitializeFloorSystem(); // 현재 층을 시작 층으로 초기화
 
         _anomalyManager.PrepareAnomalySection(); // 첫 층 이상현상 준비 → 첫 판은 정상 판
     }

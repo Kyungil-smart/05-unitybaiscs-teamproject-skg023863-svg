@@ -14,7 +14,7 @@ public class AnomalyManager : MonoBehaviour
     private bool _isAnomalyActive;
     private IAnomaly _currentAnomaly;
     private GameObject _currentAnomalyObject;
-    private bool _isFirstRound = true; // 첫 판 여부
+    private bool _isFirstRound = false; // 첫 판 여부
 
     // 다음 층 준비
     public void PrepareAnomalySection()
