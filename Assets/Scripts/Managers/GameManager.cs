@@ -2,117 +2,83 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
-게임 전체 규칙 관리자 (컨트롤 타워)
-
-역할
-- 플레이어 선택 흐름 제어
-- 엘리베이터 이동 연출 타이밍 관리
-- 이상현상 판정 결과 처리
-- 층수 변경
-- 게임 클리어 판단 및 씬 전환
-
-중요
-- 실제 이동 연출은 엘리베이터 연출
-- 이 클래스는 "논리 흐름"만 담당
-*/
 public class GameManager : MonoBehaviour
 {
-	[SerializeField] private AnomalyManager _anomalyManager; // 이상현상 담당
-	[SerializeField] private FloorSystem _floorSystem;       // 층수 담당
-	[SerializeField] private float _elevatorTravelTime = 3.0f; // 이동 연출 시간
+    [Header("매니저 연결")]
+    [SerializeField] private FloorSystem _floorSystem;
+    [SerializeField] private AnomalyManager _anomalyManager;
+    [SerializeField] private SceneFlowManager _sceneFlowManager;
 
-	private bool _isGameCleared; // 중복 입력 방지용 플래그
+    [Header("설정")]
+    [SerializeField] private float _elevatorTravelTime = 3.0f;
 
-	private void Start()
-	{
-		_isGameCleared = false;
+    private bool _isBusy;         // 중복 입력 방지
+    private bool _isFirstSection; // 첫 판 여부 (튜토리얼)
 
-		// 게임 시작 시 층수 초기화
-		_floorSystem.InitializeFloorSystem();
+    private void Start()
+    {
+        _isFirstSection = true;
+        _floorSystem.InitializeFloorSystem();
 
-		// 첫 판은 정상 섹션으로 시작
-		_anomalyManager.PrepareAnomalySection();
-	}
+        // 첫 시작은 무조건 정상 방 (튜토리얼)
+        _anomalyManager.PrepareAnomalySection(true);
+    }
 
-	/*
-	UI 버튼에서 호출
-	- 플레이어가 Up / Down 선택 시 진입점
-	*/
-	public void OnPlayerChoice(PlayerChoice playerChoice)
-	{
-		// 이미 클리어 상태면 입력 무시
-		if (_isGameCleared)
-		{
-			return;
-		}
+    public void OnPlayerChoice(PlayerChoice playerChoice)
+    {
+        if (_isBusy) return;
+        StartCoroutine(HandleElevatorSequence(playerChoice));
+    }
 
-		StartCoroutine(HandleElevatorSequence(playerChoice));
-	}
+    private IEnumerator HandleElevatorSequence(PlayerChoice playerChoice)
+    {
+        _isBusy = true;
 
-	/*
-	엘리베이터 이동 + 판정 전체 흐름
+        // 이동 시작 (소리 ON)
+        AudioManager.Instance.PlayButtonSound();
+        AudioManager.Instance.SetElevatorMoveSound(true);
 
-	이 코루틴은 "이동을 시킨다"기보다는
-	- 이동이 끝났다고 가정한 후
-	- 그 결과를 처리하는 논리 흐름임
-	*/
-	private IEnumerator HandleElevatorSequence(PlayerChoice playerChoice)
-	{
-		// 버튼 클릭음 + 이동 시작음
-		AudioManager.Instance.PlayButtonSound();
-		AudioManager.Instance.SetElevatorMoveSound(true);
+        // 이동 중에 '다음 방'을 미리 준비 (이제부터 랜덤)
+        _anomalyManager.PrepareAnomalySection(false);
 
-		// 엘리베이터 이동 연출 대기
-		yield return new WaitForSeconds(_elevatorTravelTime);
+        // 엘리베이터 이동 시간 대기
+        yield return new WaitForSeconds(_elevatorTravelTime);
 
-		// 이동 종료
-		AudioManager.Instance.SetElevatorMoveSound(false);
+        // 도착 (소리 OFF, 땡!)
+        AudioManager.Instance.SetElevatorMoveSound(false);
+        AudioManager.Instance.PlayArrivalSound();
 
-		// 플레이어 선택 판정
-		bool isChoiceCorrect =
-			_anomalyManager.IsPlayerChoiceCorrect(playerChoice);
+        // 판정 로직
+        if (_isFirstSection)
+        {
+            // 첫 판은 맞든 틀리든 카운트 하지 않음
+            _isFirstSection = false;
+            Debug.Log("튜토리얼 종료. 이제부터 게임이 시작됩니다.");
+        }
+        else
+        {
+            // 실제 게임 판정
+            bool isCorrect = _anomalyManager.IsPlayerChoiceCorrect(playerChoice);
 
-		// 판정 결과에 따른 층수 처리
-		if (isChoiceCorrect)
-		{
-			_floorSystem.GoDownOneFloor();
-		}
-		else
-		{
-			_floorSystem.ResetToStartFloor();
-		}
+            if (isCorrect)
+            {
+                _floorSystem.GoDownOneFloor();
+                Debug.Log($"정답! 현재 층: {_floorSystem.CurrentFloor}");
+            }
+            else
+            {
+                _floorSystem.ResetToStartFloor();
+                Debug.Log("오답! 처음으로 돌아갑니다.");
+            }
+        }
 
-		// 도착 효과음
-		AudioManager.Instance.PlayArrivalSound();
+        // 클리어 체크 (0층 도달 시)
+        if (_floorSystem.CurrentFloor <= 0)
+        {
+            Debug.Log("Game Clear!");
+            if (_sceneFlowManager != null) _sceneFlowManager.LoadCredit();
+        }
 
-		// 게임 클리어 조건 확인
-		if (_floorSystem.CurrentFloor <= 1)
-		{
-			HandleGameClear();
-			yield break;
-		}
-
-		// 다음 층 이상현상 준비
-		_anomalyManager.PrepareAnomalySection();
-	}
-
-	/*
-	게임 클리어 처리
-
-	- 입력 차단
-	- 크레딧 씬 이동
-	*/
-	private void HandleGameClear()
-	{
-		_isGameCleared = true;
-
-		SceneFlowManager sceneFlowManager =
-			FindObjectOfType<SceneFlowManager>();
-
-		if (sceneFlowManager != null)
-		{
-			sceneFlowManager.LoadCredit();
-		}
-	}
+        _isBusy = false;
+    }
 }

@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ElevatorButton : MonoBehaviour
+public class ElevatorButton : MonoBehaviour, IInteractable
 {
-    [SerializeField] private UnityEvent _onButtonClick;
+    [SerializeField] private PlayerChoice choose;
 
-    
+    private ElevatorController _elevatorController;
+    private GameManager _gamemanager;
+
+    public void Interact()
+    {
+        _elevatorController.ElevatorSequense();
+        _gamemanager.OnPlayerChoice(choose);
+    }
 }
