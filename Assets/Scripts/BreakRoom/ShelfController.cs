@@ -30,6 +30,16 @@ public class ShelfController : MonoBehaviour, IAnomaly
         }
     }
 
+    public void ActivateAnomaly()
+    {
+       
+    }
+
+    public void DeactivateAnomaly()
+    {
+       
+    }
+
     public bool IsChoiceCorrect(PlayerChoice choice)
     {
         if (choice == PlayerChoice.Up)
