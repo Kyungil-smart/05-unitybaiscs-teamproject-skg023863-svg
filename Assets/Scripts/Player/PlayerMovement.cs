@@ -17,8 +17,7 @@ public class PlayerMovement : MonoBehaviour
     // 상하 회전 각도 제한
     [SerializeField] private float _pitchMin;
     [SerializeField] private float _pitchMax;
-
-
+    
     // 상하 회전 각도 누적값
     private float _pitch;
 
