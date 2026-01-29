@@ -3126,7 +3126,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: breakroom anomaly 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7900285747243855558, guid: cd26937d559edf64985ec1e874c1500d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
