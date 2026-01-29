@@ -4,52 +4,61 @@ using UnityEngine;
 
 public class AnomalyManager : MonoBehaviour
 {
-    [Header("설정")]
-    [SerializeField, Range(0f, 1f), Tooltip("한 층 이상현상 등장 확률")]
-    private float _anomalySpawnChance = 0.5f;
+    [Header("확률 설정")]
+    [SerializeField, Range(0, 1)] private float _anomalySpawnChance = 0.5f;
 
-    [SerializeField, Tooltip("이상현상 프리팹 목록")]
-    private GameObject[] _anomalyPrefabs;
+    [Header("사무실 내 이변 오브젝트 리스트")]
+    [SerializeField] private GameObject[] _anomalyObjects; // 씬에 배치된 이변들 드래그
 
     private bool _isAnomalyActive;
     private IAnomaly _currentAnomaly;
-    private GameObject _currentAnomalyObject;
-    private bool _isFirstRound = true; // 첫 판 여부
 
-    // 다음 층 준비
-    public void PrepareAnomalySection()
+    // forceNormal: true면 확률 무시하고 무조건 정상 방 생성 (튜토리얼용)
+    public void PrepareAnomalySection(bool forceNormal = false)
     {
-        // 이전 이상현상 비활성화
-        if (_currentAnomalyObject != null)
-            _currentAnomalyObject.SetActive(false);
-
-        _currentAnomaly = null;
-        _currentAnomalyObject = null;
-
-        // 첫 판이면 정상 판 처리
-        if (_isFirstRound)
+        // 이전 이변 정리 (정상 물체 복구)
+        if (_currentAnomaly != null)
         {
-            _isAnomalyActive = false;
-            _isFirstRound = false; // 다음 판부터 랜덤 적용
-            return;
+            _currentAnomaly.DeactivateAnomaly();
         }
 
-        // 이후 판: 랜덤 등장
-        _isAnomalyActive = Random.value < _anomalySpawnChance;
-
-        if (_isAnomalyActive && _anomalyPrefabs.Length > 0)
+        // 모든 이변 오브젝트 끄기 (초기화)
+        foreach (var obj in _anomalyObjects)
         {
-            _currentAnomalyObject = _anomalyPrefabs[Random.Range(0, _anomalyPrefabs.Length)];
-            _currentAnomaly = _currentAnomalyObject.GetComponent<IAnomaly>();
-            _currentAnomalyObject.SetActive(true);
+            if (obj != null) obj.SetActive(false);
+        }
+
+        _currentAnomaly = null;
+
+        // 이변 등장 여부 결정
+        // forceNormal이 true면 무조건 이변 없음(false)
+        _isAnomalyActive = !forceNormal && (Random.value < _anomalySpawnChance);
+
+        if (_isAnomalyActive && _anomalyObjects.Length > 0)
+        {
+            // 랜덤 이변 선택 및 활성화
+            GameObject selected = _anomalyObjects[Random.Range(0, _anomalyObjects.Length)];
+            selected.SetActive(true);
+
+            _currentAnomaly = selected.GetComponent<IAnomaly>();
+
+            // 교체 로직 실행 (정상 물체 끄기)
+            if (_currentAnomaly != null)
+            {
+                _currentAnomaly.ActivateAnomaly();
+            }
         }
     }
 
-    // 플레이어 선택 판정
     public bool IsPlayerChoiceCorrect(PlayerChoice playerChoice)
     {
+        // 이변 없음 -> Down이 정답
         if (!_isAnomalyActive) return playerChoice == PlayerChoice.Down;
+
+        // 안전장치
         if (_currentAnomaly == null) return playerChoice == PlayerChoice.Down;
+
+        // 이변 있음 -> 이변의 로직에 따름
         return _currentAnomaly.IsChoiceCorrect(playerChoice);
     }
 }

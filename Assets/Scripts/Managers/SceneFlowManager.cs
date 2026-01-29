@@ -3,13 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/*
-씬 전환 전담 매니저
-
-사용처
-- UI 버튼
-- 게임 클리어 처리
-*/
 public class SceneFlowManager : MonoBehaviour
 {
     // 타이틀 화면 이동
