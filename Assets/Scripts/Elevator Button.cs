@@ -10,6 +10,11 @@ public class ElevatorButton : MonoBehaviour, IInteractable
     private ElevatorController _elevatorController;
     private GameManager _gamemanager;
 
+    private void Start()
+    {
+        _elevatorController = GetComponentInParent<ElevatorController>();
+    }
+
     public void Interact()
     {
         _elevatorController.ElevatorSequense();
