@@ -13,6 +13,7 @@ public class ElevatorButton : MonoBehaviour, IInteractable
     private void Start()
     {
         _elevatorController = GetComponentInParent<ElevatorController>();
+        _gamemanager = FindObjectOfType<GameManager>();
     }
 
     public void Interact()
