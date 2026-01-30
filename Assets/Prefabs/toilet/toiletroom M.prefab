@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 136963969215963648}
   - component: {fileID: 750116719490753255}
   - component: {fileID: 2900397172883211766}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: toiletroom back wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 324831922424079722}
   - component: {fileID: 6034687138465073307}
   - component: {fileID: 2739837189896346359}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: toiletroom left wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,12 +223,12 @@ GameObject:
   - component: {fileID: 808970598521459987}
   - component: {fileID: 831501369459803795}
   - component: {fileID: 790441359538466479}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.001
   m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &828353695727212983
 Transform:
@@ -347,7 +347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 828643512487496461}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet cabine Prefab (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 799752332540744149}
   - component: {fileID: 809925166616385783}
   - component: {fileID: 831562770266983443}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 799083941724649073}
   - component: {fileID: 809221069142740297}
   - component: {fileID: 831511282385163459}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,12 +597,12 @@ GameObject:
   - component: {fileID: 799566897781022939}
   - component: {fileID: 809710382331755077}
   - component: {fileID: 831540574658798603}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &828609135688330491
 Transform:
@@ -700,7 +700,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 828640558518479979}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -737,7 +737,7 @@ GameObject:
   - component: {fileID: 800407087761708397}
   - component: {fileID: 809080490310540663}
   - component: {fileID: 830959104058457307}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -938,6 +938,42 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300108, guid: 18cd780e6948a554a850b2d047ebf8fb, type: 3}
+--- !u!1 &935536930837568459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4092200664378308203}
+  m_Layer: 6
+  m_Name: urinals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4092200664378308203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935536930837568459}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.9940968, y: 1.838, z: 0.388109}
+  m_LocalScale: {x: 2, y: 2, z: 1.0322046}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3583942349769432684}
+  - {fileID: 4320719932755930629}
+  - {fileID: 5946435213257827806}
+  - {fileID: 6066231912764985600}
+  - {fileID: 5451773335418309190}
+  m_Father: {fileID: 318928942196904934}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &969430783145099796
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,7 +986,7 @@ GameObject:
   - component: {fileID: 3573156458244223770}
   - component: {fileID: 322114903988927201}
   - component: {fileID: 8051381745891917060}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: toiletroom frontwall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1055,7 +1091,7 @@ GameObject:
   - component: {fileID: 2099679494708707232}
   - component: {fileID: 2090961554176235726}
   - component: {fileID: 2139975128790476030}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trash bin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1158,7 +1194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2114891114373634800}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trash bin Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1190,7 +1226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3065822563044911929}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Urinal wall Prefab right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1225,7 +1261,7 @@ GameObject:
   - component: {fileID: 3092961541833114643}
   - component: {fileID: 3084421774769737813}
   - component: {fileID: 3062021152412240095}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Urinal wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1328,7 +1364,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3301618412674518590}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mirror bath Prefab 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1365,7 +1401,7 @@ GameObject:
   - component: {fileID: 3281603418241393524}
   - component: {fileID: 3259060234586327880}
   - component: {fileID: 3395928414323848612}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mirror bath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1504,7 +1540,7 @@ GameObject:
   - component: {fileID: 4843819902929754248}
   - component: {fileID: 8728536965792232113}
   - component: {fileID: 6949914153130907271}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: toiletroom M roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1609,7 +1645,7 @@ GameObject:
   - component: {fileID: 3586115210557674976}
   - component: {fileID: 3594331478832814736}
   - component: {fileID: 3555488356997119534}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: urinal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1712,7 +1748,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3583942349769432684}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: urinal prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1728,12 +1764,12 @@ Transform:
   m_GameObject: {fileID: 3582414857472602938}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.9940968, y: 1.838, z: 0.38810903}
-  m_LocalScale: {x: 2, y: 2, z: 1.0322047}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3584118706697248892}
-  m_Father: {fileID: 318928942196904934}
+  m_Father: {fileID: 4092200664378308203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4213481546078269414
 GameObject:
@@ -1747,7 +1783,7 @@ GameObject:
   - component: {fileID: 4182833291080895936}
   - component: {fileID: 4190897420111743152}
   - component: {fileID: 4220950680576256640}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet paper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1849,7 +1885,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4209283495950659582}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet paper prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1884,7 +1920,7 @@ GameObject:
   - component: {fileID: 944192250503384084}
   - component: {fileID: 6813884253042518179}
   - component: {fileID: 3850587184786996466}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: toiletroom frontwall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1986,7 +2022,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4320719932755930629}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: urinal prefab (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2002,12 +2038,12 @@ Transform:
   m_GameObject: {fileID: 4322809283941876563}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.9940968, y: 1.838, z: 2.4525185}
-  m_LocalScale: {x: 2, y: 2, z: 1.0322047}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4321106602408284181}
-  m_Father: {fileID: 318928942196904934}
+  m_Father: {fileID: 4092200664378308203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4323140932109157311
 GameObject:
@@ -2021,7 +2057,7 @@ GameObject:
   - component: {fileID: 4291525542484370825}
   - component: {fileID: 4299633732206471929}
   - component: {fileID: 4259664882262609479}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: urinal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2127,7 +2163,7 @@ GameObject:
   - component: {fileID: 709529552113224589}
   - component: {fileID: 3695790833918457967}
   - component: {fileID: 7225830419034535133}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: toiletroom right wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2232,7 +2268,7 @@ GameObject:
   - component: {fileID: 5059673692339179321}
   - component: {fileID: 5048688558997563479}
   - component: {fileID: 5090937852178895975}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trash bin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2335,7 +2371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5065853904098585193}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trash bin Prefab (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2370,7 +2406,7 @@ GameObject:
   - component: {fileID: 5108690896930272136}
   - component: {fileID: 5098171416154955094}
   - component: {fileID: 5076007805894179558}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Window Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2386,7 +2422,7 @@ Transform:
   m_GameObject: {fileID: 5086271359944250606}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.000054, y: 0.00458, z: -0.00782}
+  m_LocalPosition: {x: -0.00005, y: 0.00455, z: -0.00782}
   m_LocalScale: {x: 0.90328914, y: 0.28972173, z: 0.3472433}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2476,7 +2512,7 @@ GameObject:
   - component: {fileID: 5108711286041205566}
   - component: {fileID: 5099880997525593650}
   - component: {fileID: 5077786371862319326}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door.006 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2590,7 +2626,7 @@ GameObject:
   - component: {fileID: 5098165812874418772}
   - component: {fileID: 5117674414060300836}
   - component: {fileID: 5075997928283110666}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door.009
   m_TagString: door
   m_Icon: {fileID: 0}
@@ -2716,7 +2752,7 @@ GameObject:
   - component: {fileID: 5462970432507871690}
   - component: {fileID: 5473438208541314746}
   - component: {fileID: 5423336362515098116}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: urinal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2819,7 +2855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5451773335418309190}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: urinal prefab (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2835,12 +2871,12 @@ Transform:
   m_GameObject: {fileID: 5450311264054945552}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.9940968, y: 1.838, z: -1.6763004}
-  m_LocalScale: {x: 2, y: 2, z: 1.0322047}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5452019235380786262}
-  m_Father: {fileID: 318928942196904934}
+  m_Father: {fileID: 4092200664378308203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5767843599698388881
 GameObject:
@@ -2961,12 +2997,12 @@ GameObject:
   - component: {fileID: 5800226503048003947}
   - component: {fileID: 5790083001346546677}
   - component: {fileID: 5831056655466431931}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5771896198915231051
 Transform:
@@ -3064,7 +3100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5771860447756184253}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cabine Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3100,12 +3136,12 @@ GameObject:
   - component: {fileID: 5790539385993098403}
   - component: {fileID: 5831102182861743907}
   - component: {fileID: 5881169671231409951}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.001
   m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5771589221494978567
 Transform:
@@ -3223,7 +3259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5789844387485854953}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plant 3 Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3259,7 +3295,7 @@ GameObject:
   - component: {fileID: 5774511521146159235}
   - component: {fileID: 5765918264499057801}
   - component: {fileID: 5815014271506020687}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plant 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3364,7 +3400,7 @@ GameObject:
   - component: {fileID: 5789919436465087309}
   - component: {fileID: 5773890394906724415}
   - component: {fileID: 5765206801125862013}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3448,7 +3484,7 @@ GameObject:
   - component: {fileID: 5979992017781747282}
   - component: {fileID: 5969770523766464802}
   - component: {fileID: 5939933536537445788}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: urinal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3551,7 +3587,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5946435213257827806}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: urinal prefab (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3567,12 +3603,12 @@ Transform:
   m_GameObject: {fileID: 5948701585841014920}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.9940968, y: 1.838, z: 1.4203138}
-  m_LocalScale: {x: 2, y: 2, z: 1.0322047}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5945907366823369678}
-  m_Father: {fileID: 318928942196904934}
+  m_Father: {fileID: 4092200664378308203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6063083190573005910
 GameObject:
@@ -3583,7 +3619,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6066231912764985600}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: urinal prefab (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3599,12 +3635,12 @@ Transform:
   m_GameObject: {fileID: 6063083190573005910}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.9940968, y: 1.838, z: -0.6440957}
-  m_LocalScale: {x: 2, y: 2, z: 1.0322047}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6065915102757334800}
-  m_Father: {fileID: 318928942196904934}
+  m_Father: {fileID: 4092200664378308203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6063872528708959418
 GameObject:
@@ -3618,7 +3654,7 @@ GameObject:
   - component: {fileID: 6077429114022189708}
   - component: {fileID: 6085080198961108476}
   - component: {fileID: 6108161538178888002}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: urinal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3725,7 +3761,7 @@ GameObject:
   - component: {fileID: 6332207507924282515}
   - component: {fileID: 6291704351719261359}
   - component: {fileID: 6145970001279105603}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mirror bath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3861,7 +3897,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6321833100477563353}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mirror bath Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3894,7 +3930,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6644686000249993395}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet paper prefab (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3929,7 +3965,7 @@ GameObject:
   - component: {fileID: 6651995906703547021}
   - component: {fileID: 6662448103242096637}
   - component: {fileID: 6687599122583928269}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet paper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4031,7 +4067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6664567317036820798}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4068,12 +4104,12 @@ GameObject:
   - component: {fileID: 6636618392272364942}
   - component: {fileID: 6646763113737994000}
   - component: {fileID: 6667747644217844062}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6664605099014842798
 Transform:
@@ -4171,7 +4207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6664569313202933336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet cabine Prefab (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4210,12 +4246,12 @@ GameObject:
   - component: {fileID: 6645249136344600646}
   - component: {fileID: 6667779975996163014}
   - component: {fileID: 6771890612271639546}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.001
   m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6664280527268355298
 Transform:
@@ -4336,7 +4372,7 @@ GameObject:
   - component: {fileID: 6637155876877653120}
   - component: {fileID: 6647258337945607586}
   - component: {fileID: 6667840346017614150}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4442,7 +4478,7 @@ GameObject:
   - component: {fileID: 6635009536315274020}
   - component: {fileID: 6645147969371899932}
   - component: {fileID: 6667789820168622486}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4548,7 +4584,7 @@ GameObject:
   - component: {fileID: 6636404356732948536}
   - component: {fileID: 6645288796797098018}
   - component: {fileID: 6668292279684708750}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4761,7 +4797,7 @@ GameObject:
   - component: {fileID: 6943591702336619702}
   - component: {fileID: 6952827437235997868}
   - component: {fileID: 6975830885960903936}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4974,12 +5010,12 @@ GameObject:
   - component: {fileID: 6944453899701203200}
   - component: {fileID: 6952329194562284446}
   - component: {fileID: 6975284599735629264}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6933509614599847200
 Transform:
@@ -5077,7 +5113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6933544439492885936}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5114,7 +5150,7 @@ GameObject:
   - component: {fileID: 6940578365889144746}
   - component: {fileID: 6952968049911782546}
   - component: {fileID: 6975256442558088472}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5221,12 +5257,12 @@ GameObject:
   - component: {fileID: 6952717407340807368}
   - component: {fileID: 6975266355448977224}
   - component: {fileID: 7043418602488414068}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.001
   m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6933835403968497772
 Transform:
@@ -5344,7 +5380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6933545881448602326}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet cabine Prefab (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5382,7 +5418,7 @@ GameObject:
   - component: {fileID: 6944061748198735886}
   - component: {fileID: 6951982748021262636}
   - component: {fileID: 6975306384583040456}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5488,7 +5524,7 @@ GameObject:
   - component: {fileID: 7305382304815735086}
   - component: {fileID: 7297893005605285470}
   - component: {fileID: 7345390831260875982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5591,7 +5627,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7284790112921548704}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sink Prefab (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5623,7 +5659,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7375076249210172656}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sink Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5658,7 +5694,7 @@ GameObject:
   - component: {fileID: 7359058009010971262}
   - component: {fileID: 7351596156654841102}
   - component: {fileID: 7399797710764113822}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5764,7 +5800,7 @@ GameObject:
   - component: {fileID: 7430546650348761968}
   - component: {fileID: 7438121240342385694}
   - component: {fileID: 7462374035363670062}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trash bin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5867,7 +5903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7450237927882741280}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trash bin Prefab (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5899,7 +5935,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7592854743474817974}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet paper prefab (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5934,7 +5970,7 @@ GameObject:
   - component: {fileID: 7582149274246801800}
   - component: {fileID: 7574019793060490488}
   - component: {fileID: 7612922198005223112}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet paper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6039,7 +6075,7 @@ GameObject:
   - component: {fileID: 2380705374600130312}
   - component: {fileID: 3850907747050233465}
   - component: {fileID: 822675166478273534}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: toiletroom frontwall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6144,7 +6180,7 @@ GameObject:
   - component: {fileID: 7974520106169649885}
   - component: {fileID: 7964992698425466523}
   - component: {fileID: 7942445287591118353}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Urinal wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6247,7 +6283,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7983961346057233911}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Urinal wall Prefab left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6282,7 +6318,7 @@ GameObject:
   - component: {fileID: 6140903295793703167}
   - component: {fileID: 1279165157273232639}
   - component: {fileID: 8899383586135257447}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: toiletroom frontwall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6387,7 +6423,7 @@ GameObject:
   - component: {fileID: 3088766043125273639}
   - component: {fileID: 7667240668429310101}
   - component: {fileID: 2860299928529653532}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: toiletroom frontwall (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6492,7 +6528,7 @@ GameObject:
   - component: {fileID: 1480946131234093178}
   - component: {fileID: 2248116735843744161}
   - component: {fileID: 7089794580319946501}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: toiletroom M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6517,13 +6553,10 @@ Transform:
   - {fileID: 5255991763747775325}
   - {fileID: 6481985479603974168}
   - {fileID: 2762414814764035240}
-  - {fileID: 3583942349769432684}
-  - {fileID: 4320719932755930629}
-  - {fileID: 5946435213257827806}
-  - {fileID: 6066231912764985600}
-  - {fileID: 5451773335418309190}
+  - {fileID: 4092200664378308203}
   - {fileID: 7983961346057233911}
   - {fileID: 3065822563044911929}
+  - {fileID: 5458427921420580220}
   - {fileID: 6933545881448602326}
   - {fileID: 828643512487496461}
   - {fileID: 6664569313202933336}
@@ -6618,7 +6651,7 @@ GameObject:
   - component: {fileID: 7251061525744885420}
   - component: {fileID: 3753605474353677742}
   - component: {fileID: 9116276017960457790}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: toiletroom frontwall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6723,7 +6756,7 @@ GameObject:
   - component: {fileID: 4998092352546932790}
   - component: {fileID: 386600110567740294}
   - component: {fileID: 4012596524603825212}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: toilet poster (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6882,7 +6915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8786737510545058259, guid: f047d65dbf312234585fae0c3feb8060, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6893,4 +6926,66 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8313077951423853345, guid: f047d65dbf312234585fae0c3feb8060, type: 3}
   m_PrefabInstance: {fileID: 482936483827243852}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7395833729338467892
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 318928942196904934}
+    m_Modifications:
+    - target: {fileID: 3270594994834674504, guid: 12c0a816686aef743b82cf1c00968be7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.663
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270594994834674504, guid: 12c0a816686aef743b82cf1c00968be7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.903
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270594994834674504, guid: 12c0a816686aef743b82cf1c00968be7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270594994834674504, guid: 12c0a816686aef743b82cf1c00968be7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270594994834674504, guid: 12c0a816686aef743b82cf1c00968be7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270594994834674504, guid: 12c0a816686aef743b82cf1c00968be7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270594994834674504, guid: 12c0a816686aef743b82cf1c00968be7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270594994834674504, guid: 12c0a816686aef743b82cf1c00968be7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270594994834674504, guid: 12c0a816686aef743b82cf1c00968be7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270594994834674504, guid: 12c0a816686aef743b82cf1c00968be7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981774129998136769, guid: 12c0a816686aef743b82cf1c00968be7, type: 3}
+      propertyPath: m_Name
+      value: anomaly urinal
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12c0a816686aef743b82cf1c00968be7, type: 3}
+--- !u!4 &5458427921420580220 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3270594994834674504, guid: 12c0a816686aef743b82cf1c00968be7, type: 3}
+  m_PrefabInstance: {fileID: 7395833729338467892}
   m_PrefabAsset: {fileID: 0}
