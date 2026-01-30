@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShelfController : MonoBehaviour, IAnomaly
+public class ShelfController : AnomalyBase
 {
     private Animator _animator;
 
