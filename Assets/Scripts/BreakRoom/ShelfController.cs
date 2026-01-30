@@ -14,7 +14,7 @@ public class ShelfController : AnomalyBase
     }
 
     // 트리거 범위 내에 플레이어 진입시 움직임 
-
+    /*
     public override void ActivateAnomaly()
     {
         base.ActivateAnomaly();
@@ -24,6 +24,7 @@ public class ShelfController : AnomalyBase
             _animator.SetTrigger("isPlayerInRoom");
         }
     }
+    */
 
     private void OnTriggerStay(Collider other)
     {
@@ -34,7 +35,7 @@ public class ShelfController : AnomalyBase
     }
 
     // 트리거 범위 밖으로 플레이어가 나가면 멈춤
-    
+    /*
     public override void DeactivateAnomaly()
     {
         if (_animator != null && !_isPlayerInRoom)
@@ -44,6 +45,7 @@ public class ShelfController : AnomalyBase
         
         base.DeactivateAnomaly();
     }
+    */
 
     private void OnTriggerExit(Collider other)
     {
