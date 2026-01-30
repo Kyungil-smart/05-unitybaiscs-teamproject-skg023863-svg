@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ElevatorController : MonoBehaviour
@@ -9,8 +6,6 @@ public class ElevatorController : MonoBehaviour
     [SerializeField] private float _speed;
 
     private Animator _animator;
-    private GameManager _gameManager;
-    //private AnimatorControllerParameter _parameter;
 
     [SerializeField] private TextMeshProUGUI _textMeshPro;
 
@@ -21,28 +16,35 @@ public class ElevatorController : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         isClose = _animator.GetBool("isClose");
-        //_parameter = _animator.GetParameter(0);
-        //isClose = _animator.GetBool(_parameter.name);
     }
 
-    private void Start()
+    /// <summary>
+    /// 층 전환시 호출되어야할 함수
+    /// </summary>
+    /// <param name="floor">층 수 입력</param>
+    public void SetFloorText(int floor)
     {
-        //_textMeshPro.SetText(_gameManager.);
+        _textMeshPro.SetText(floor.ToString());
     }
 
-    //Todo : 엘리베이터 버튼 연속으로 누를 때 예외처리 필요
+    /// <summary>
+    /// 만약 버튼이외에서 제어가 필요할 경우 호출할 수 있지만, 가급적 호출 지양
+    /// </summary>
     public void ElevatorSequense()
     {
-        if (isClose)
+        // 엘리베이터의 모든 애니메이션의 길이는 1.0 이기 때문에 하드 코딩
+        if (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
         {
-            _animator.SetBool("isClose", false);
-            isClose = false;
+            if (isClose)
+            {
+                _animator.SetBool("isClose", false);
+                isClose = false;
+            }
+            else
+            {
+                _animator.SetBool("isClose", true);
+                isClose = true;
+            }
         }
-        else
-        {
-            _animator.SetBool("isClose", true);
-            isClose = true;
-        }
-
     }
 }
