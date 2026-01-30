@@ -1,5 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO.Compression;
+using System.Security.Cryptography.X509Certificates;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -17,9 +20,16 @@ public class PlayerMovement : MonoBehaviour
     // 상하 회전 각도 제한
     [SerializeField] private float _pitchMin;
     [SerializeField] private float _pitchMax;
+
+    private Rigidbody _rigidbody;
     
     // 상하 회전 각도 누적값
     private float _pitch;
+
+    private void Awake()
+    {
+        _rigidbody = GetComponent<Rigidbody>();
+    }
 
     private void Update()
     {
@@ -53,14 +63,20 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
 
+
         // 왼쪽 Shift 누르면 달리기
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
 
         // 입력이 있을때만 달리기 속도 적용
         float speed = isRunning ? _runSpeed : _moveSpeed;
 
+        Vector3 velocity = 
+        transform.right * x * speed + transform.forward * z * speed;
 
-        Vector3 movement = (transform.right * x + transform.forward * z).normalized;
-        transform.position += movement * (speed * Time.deltaTime);
+        velocity.y = _rigidbody.velocity.y;
+
+        _rigidbody.velocity = velocity;
+        /*Vector3 movement = (transform.right * x + transform.forward * z).normalized;
+        transform.position += movement * (speed * Time.deltaTime);*/
     }
 }
