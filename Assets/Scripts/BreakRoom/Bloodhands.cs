@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bloodhands : MonoBehaviour, IAnomaly
+public class Bloodhands : AnomalyBase
 {
     public void ActivateAnomaly()
     {

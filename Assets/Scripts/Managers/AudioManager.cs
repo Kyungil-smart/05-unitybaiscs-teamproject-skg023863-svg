@@ -1,16 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
-    [Header("Audio Sources")]
+    [Header("오디오 소스")]
     [SerializeField] private AudioSource _sfxSource;
     [SerializeField] private AudioSource _movementSource;
 
-    [Header("Clips")]
+    [Header("오디오 클립")]
     [SerializeField] private AudioClip _buttonClip;
     [SerializeField] private AudioClip _arrivalClip;
     [SerializeField] private AudioClip _elevatorMoveClip;
