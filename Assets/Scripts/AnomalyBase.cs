@@ -1,35 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-/*
-1. 스크립트 작성 시 : AnomalyBase 상속
-2. 인스펙터 'Target Normal Object'에 사라져야 할 정상 물체 연결 (없으면 비워둠)
-*/
-public class AnomalyBase : MonoBehaviour, IAnomaly
+public abstract class AnomalyBase : MonoBehaviour, IAnomaly
 {
-    [SerializeField, Tooltip("이상현상이 켜질때 꺼져야 할 정상 오브젝트")]
-    protected GameObject _targetNormalObject;
+    [SerializeField]
+    protected GameObject _normalObject;
 
-    public virtual void ActivateAnomaly()
+    protected bool _isActive;
+
+    public virtual void Enter()
     {
-        // 타겟이 있으면 끄고(액자 사라짐 등), 없으면 그냥 둠
-        if (_targetNormalObject != null)
-            _targetNormalObject.SetActive(false);
+        _isActive = true;
+
+        if (_normalObject != null)
+        {
+            _normalObject.SetActive(false);
+        }
     }
 
-    public virtual void DeactivateAnomaly()
+    public virtual void Exit()
     {
-        // 다시 정상으로 복구
-        if (_targetNormalObject != null)
-            _targetNormalObject.SetActive(true);
+        _isActive = false;
 
-        gameObject.SetActive(false);
+        if (_normalObject != null)
+        {
+            _normalObject.SetActive(true);
+        }
     }
 
-    // 기본적으로 이변이 존재하면 Up이 정답
-    public virtual bool IsChoiceCorrect(PlayerChoice choice)
+    public virtual bool IsChoiceCorrect(PlayerChoice playerChoice)
     {
-        return choice == PlayerChoice.Up;
+        if (_isActive)
+        {
+            return playerChoice == PlayerChoice.Up;
+        }
+
+        return playerChoice == PlayerChoice.Down;
     }
 }

@@ -986,6 +986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
+  _textMeshPro: {fileID: 1489486381772054786}
 --- !u!95 &3712774584157300555
 Animator:
   serializedVersion: 5
