@@ -10,12 +10,12 @@ public class GrowOverTime : MonoBehaviour
     
     private void Update()
     {
-        ApplyGrowth(Time.deltaTime);
+        ApplyGrowth();
     }
 
-    private void ApplyGrowth(float deltaTime)
+    private void ApplyGrowth()
     {
-        Vector3 nextLocalScale = transform.localScale + (_scalePerSecond * deltaTime);
+        Vector3 nextLocalScale = transform.localScale + (_scalePerSecond * Time.deltaTime);
         
         // 최대값을 넘지 않게
         nextLocalScale = new Vector3(
