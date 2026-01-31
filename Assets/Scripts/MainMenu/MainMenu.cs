@@ -1,26 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+//using UnityEditor.SceneManagement;
+
 
 public class MainMenu : MonoBehaviour
 {
-    public void OnClickStartGame()
+    public void OnClickStartGameButton()
     {
         Debug.Log("OnclickStartGame");
     }
     
-
-    public void OnClickCredits()
+    public void OnClickCreditsButton()
     {
+        //SceneManager.LoadScene("CreditScene");
         Debug.Log("OnclickCredits");
     }
 
-    public void OnClickOptions()
+    public void OnClickOptionsButton()
     {
         Debug.Log("OnclickOptions");
     }
     
-    public void OnClickQuitGame()
+    public void OnClickQuitGameButton()
     {
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
