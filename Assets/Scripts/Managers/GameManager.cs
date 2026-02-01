@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ElevatorController _elevatorController;
 
     [Header("설정")]
-    
     [SerializeField] private float _elevatorTravelTime = 3.0f;
     [SerializeField] private float _displayResultTime = 2.0f;
 
@@ -70,6 +69,8 @@ public class GameManager : MonoBehaviour
         if(_elevatorController != null)
             _elevatorController.SetFloorText(_floorSystem.CurrentFloor);
 
+        _anomalyManager.PrepareAnomalySection(false);
+
         if (_elevatorController != null)
             _elevatorController.ElevatorSequense();
 
@@ -80,7 +81,6 @@ public class GameManager : MonoBehaviour
             yield break;
         }
 
-        _anomalyManager.PrepareAnomalySection(false);
         _isBusy = false;
     }
 }
