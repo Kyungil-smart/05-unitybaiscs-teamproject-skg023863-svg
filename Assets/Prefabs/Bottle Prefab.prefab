@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8244561981089607737}
   - component: {fileID: 3230311818566457166}
   - component: {fileID: 5593957009990947702}
+  - component: {fileID: 6260616139799035016}
+  - component: {fileID: 4064360873886766332}
   m_Layer: 0
   m_Name: Bottle
   m_TagString: Untagged
@@ -105,6 +107,39 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0012099, y: 0.0012098998, z: 0.0035874597}
   m_Center: {x: -2.910383e-10, y: 0.0000000029103826, z: 0.0017937298}
+--- !u!95 &6260616139799035016
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15024696018634185}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e09194a0c8ee9e44b338e771c0acdd0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4064360873886766332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15024696018634185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035256d81d3903a4aa6a4d8d392073e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2830037363292414892
 GameObject:
   m_ObjectHideFlags: 0
