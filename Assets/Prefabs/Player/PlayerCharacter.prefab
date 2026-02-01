@@ -154,8 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _viewPoint: {fileID: 5242771156493693536}
-  _moveSpeed: 5
-  _runSpeed: 13
+  _moveSpeed: 4
+  _runSpeed: 8
   _mouseSensitivity: 200
   _pitchMin: -85
   _pitchMax: 45
