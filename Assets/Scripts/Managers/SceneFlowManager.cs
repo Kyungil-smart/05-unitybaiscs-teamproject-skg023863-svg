@@ -11,16 +11,28 @@ public enum SceneType
 
 public class SceneFlowManager : MonoBehaviour
 {
+    public static SceneFlowManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void LoadScene(SceneType scene)
     {
         SceneManager.LoadScene((int)scene);
     }
 
     public void LoadTitle() => LoadScene(SceneType.Title);
-    
     public void LoadCredit() => LoadScene(SceneType.Credit);
-    
     public void LoadGame() => LoadScene(SceneType.Game);
-    
     public void LoadEnding() => LoadScene(SceneType.Ending);
 }
