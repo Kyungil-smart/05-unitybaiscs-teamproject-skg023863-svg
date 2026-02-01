@@ -2,38 +2,26 @@ using UnityEngine;
 
 public abstract class AnomalyBase : MonoBehaviour, IAnomaly
 {
-    [SerializeField]
-    protected GameObject _normalObject;
-
     protected bool _isActive;
 
     public virtual void Enter()
     {
         _isActive = true;
-
-        if (_normalObject != null)
-        {
-            _normalObject.SetActive(false);
-        }
+        OnAnomalyStart(); 
     }
 
     public virtual void Exit()
     {
         _isActive = false;
-
-        if (_normalObject != null)
-        {
-            _normalObject.SetActive(true);
-        }
+        OnAnomalyEnd();
     }
 
     public virtual bool IsChoiceCorrect(PlayerChoice playerChoice)
     {
-        if (_isActive)
-        {
-            return playerChoice == PlayerChoice.Up;
-        }
-
+        if (_isActive) return playerChoice == PlayerChoice.Up;
         return playerChoice == PlayerChoice.Down;
     }
+
+    protected virtual void OnAnomalyStart() { }
+    protected virtual void OnAnomalyEnd() { }
 }
