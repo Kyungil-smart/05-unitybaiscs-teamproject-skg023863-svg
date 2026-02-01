@@ -8,6 +8,11 @@ public class CursorOnMenu : MonoBehaviour
 
     private void Awake()
     {
+        Init();
+    }
+
+    private void Init()
+    {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         
