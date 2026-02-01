@@ -28,9 +28,10 @@ public class ShelfController : AnomalyBase
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             _isPlayerInRoom = true;
+            _animator.SetTrigger("isPlayerInRoom");
         }
     }
 
@@ -49,9 +50,10 @@ public class ShelfController : AnomalyBase
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             _isPlayerInRoom = false;
+            _animator.ResetTrigger("isPlayerInRoom");
         }
     }
 }

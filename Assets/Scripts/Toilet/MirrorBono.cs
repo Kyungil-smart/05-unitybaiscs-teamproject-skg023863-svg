@@ -5,23 +5,17 @@ using UnityEngine;
 
 public class MirrorBono : MonoBehaviour
 {
-    private PlayerMovement _playerMovement;
-
-    private void Awake()
-    {
-        Init();
-    }
-
-    private void Init()
-    {
-        _playerMovement = GetComponent<PlayerMovement>();
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            
+            PlayerMovement _playerMovement = other.GetComponent<PlayerMovement>();
+            Debug.Log("player entered");
+            // _playerMovement._isSeeBono = true;
         }
     }
+
+    
+
+    
 }
