@@ -524,12 +524,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673152245889901414}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5000003, y: -0.49999976, z: -0.49999976, w: 0.5000003}
-  m_LocalPosition: {x: -0.0015400082, y: 0.016084548, z: 0.0049999887}
-  m_LocalScale: {x: 0.022130312, y: 0.029999921, z: 0.0014999943}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.0103989, y: 3, z: 5.2435975}
+  m_LocalScale: {x: 4.4260745, y: 6, z: 0.15483074}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6341689106027801710}
+  m_Father: {fileID: 3488899881844328929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2880611371100534349
 MeshFilter:
@@ -629,12 +629,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 683533694202049869}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5000003, y: -0.49999976, z: -0.49999976, w: 0.5000003}
-  m_LocalPosition: {x: -0.0015399928, y: 0.000017583328, z: 0.014662967}
-  m_LocalScale: {x: 0.01023134, y: 0.0106749395, z: 0.0014999943}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.20300293, y: 4.991, z: 5.2435985}
+  m_LocalScale: {x: 2.0462735, y: 2.0175688, z: 0.15483074}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6341689106027801710}
+  m_Father: {fileID: 3488899881844328929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2122324315921406534
 MeshFilter:
@@ -1441,12 +1441,12 @@ GameObject:
   - component: {fileID: 2737009975001401025}
   - component: {fileID: 2729140160269294687}
   - component: {fileID: 2695765525313765905}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2710250357591001825
 Transform:
@@ -1829,12 +1829,12 @@ GameObject:
   - component: {fileID: 2727347047212888841}
   - component: {fileID: 2695800056516829321}
   - component: {fileID: 2601752322461649077}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.001
   m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2710488050751586221
 Transform:
@@ -2415,12 +2415,12 @@ GameObject:
   - component: {fileID: 3523859129116166622}
   - component: {fileID: 3513733099325150016}
   - component: {fileID: 3491938228674891022}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &3494843270960383486
 Transform:
@@ -2769,12 +2769,12 @@ GameObject:
   - component: {fileID: 3514470821609470998}
   - component: {fileID: 3491966437822410646}
   - component: {fileID: 3533026443351787434}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.001
   m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &3495080981292478642
 Transform:
@@ -3172,12 +3172,12 @@ GameObject:
   - component: {fileID: 4098954543559571013}
   - component: {fileID: 4091067153806339291}
   - component: {fileID: 4067015535541219989}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4072669365418981989
 Transform:
@@ -3385,12 +3385,12 @@ GameObject:
   - component: {fileID: 4089482673107108749}
   - component: {fileID: 4066995366171922445}
   - component: {fileID: 4108125710317549617}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.001
   m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4072432636478525225
 Transform:
@@ -4039,6 +4039,12 @@ Transform:
   - {fileID: 1650376341287519728}
   - {fileID: 5257052762514699625}
   - {fileID: 7788096631947832041}
+  - {fileID: 3927665244391497992}
+  - {fileID: 1187351164905069641}
+  - {fileID: 5258112450527151261}
+  - {fileID: 3528040503949070612}
+  - {fileID: 3991663244012469728}
+  - {fileID: 7816055754149346882}
   - {fileID: 6341689106027801710}
   - {fileID: 653878679837892607}
   m_Father: {fileID: 0}
@@ -4267,12 +4273,12 @@ GameObject:
   - component: {fileID: 5077439281256913124}
   - component: {fileID: 5099953233092316004}
   - component: {fileID: 5166909000648008536}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.001
   m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5058207770609079360
 Transform:
@@ -4393,12 +4399,12 @@ GameObject:
   - component: {fileID: 5067705982030949676}
   - component: {fileID: 5075575659324110770}
   - component: {fileID: 5099908599994984956}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5058516517552726284
 Transform:
@@ -4514,12 +4520,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5125400754626966334}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5000003, y: -0.49999976, z: -0.49999976, w: 0.5000003}
-  m_LocalPosition: {x: -0.0015399784, y: -0.01498738, z: 0.0049999887}
-  m_LocalScale: {x: 0.01986787, y: 0.029999921, z: 0.0014999943}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.2040024, y: 3, z: 5.2436004}
+  m_LocalScale: {x: 3.9735842, y: 6, z: 0.15483074}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6341689106027801710}
+  m_Father: {fileID: 3488899881844328929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1214610252060393072
 MeshFilter:
@@ -4915,12 +4921,12 @@ GameObject:
   - component: {fileID: 5445570543860525746}
   - component: {fileID: 5455696539035988012}
   - component: {fileID: 5404343649869344354}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5473531386782394002
 Transform:
@@ -5091,12 +5097,12 @@ GameObject:
   - component: {fileID: 5453901121730797434}
   - component: {fileID: 5404383610983812346}
   - component: {fileID: 5364379171224298694}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.001
   m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5473222757954540510
 Transform:
@@ -5785,12 +5791,12 @@ GameObject:
   - component: {fileID: 5504441789421827045}
   - component: {fileID: 5535953956317028453}
   - component: {fileID: 5593902739714721881}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.001
   m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5487453153666613057
 Transform:
@@ -6051,12 +6057,12 @@ GameObject:
   - component: {fileID: 5494707133611034157}
   - component: {fileID: 5504829830199418035}
   - component: {fileID: 5535917225552790269}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5487197730882079245
 Transform:
@@ -6404,12 +6410,12 @@ GameObject:
   - component: {fileID: 5932102794390126651}
   - component: {fileID: 5942247481513056933}
   - component: {fileID: 5963197377342031083}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5923498269488925723
 Transform:
@@ -6652,12 +6658,12 @@ GameObject:
   - component: {fileID: 5940735737401226739}
   - component: {fileID: 5963231840498673267}
   - component: {fileID: 6031313782818393679}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toilet cabine.001
   m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5923736097940846935
 Transform:
@@ -7249,20 +7255,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6343436518388995750}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5000003, y: 0.49999976, z: 0.49999976, w: 0.5000003}
-  m_LocalPosition: {x: 0.20651817, y: 2, z: 5.0846405}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 0.20651817, y: 2.14, z: 5.232}
   m_LocalScale: {x: 103.220856, y: 200.00049, z: 200.00049}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6341714415924753838}
-  - {fileID: 7816055754149346882}
-  - {fileID: 3991663244012469728}
-  - {fileID: 3528040503949070612}
-  - {fileID: 5258112450527151261}
-  - {fileID: 1187351164905069641}
-  - {fileID: 3927665244391497992}
   m_Father: {fileID: 3488899881844328929}
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 90.00001}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
 --- !u!33 &6375572128648126060
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7348,7 +7348,7 @@ GameObject:
   - component: {fileID: 6367823795802840838}
   - component: {fileID: 6456751232787378038}
   - component: {fileID: 6408285761017149528}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door.009
   m_TagString: door
   m_Icon: {fileID: 0}
@@ -7474,7 +7474,7 @@ GameObject:
   - component: {fileID: 6375667189256353498}
   - component: {fileID: 6367820694088538116}
   - component: {fileID: 6408278114087911348}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Window Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8008,12 +8008,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7008880031946713286}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5000003, y: -0.49999976, z: -0.49999976, w: 0.5000003}
-  m_LocalPosition: {x: 0.00014898606, y: 0.01608455, z: 0.0049999887}
-  m_LocalScale: {x: 0.022130312, y: 0.029999921, z: 0.0018182932}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.0103989, y: 3, z: 5.0692587}
+  m_LocalScale: {x: 4.4260745, y: 6, z: 0.1876858}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6341689106027801710}
+  m_Father: {fileID: 3488899881844328929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2234677570748478807
 MeshFilter:
@@ -8667,12 +8667,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7939733211432527567}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5000003, y: -0.49999976, z: -0.49999976, w: 0.5000003}
-  m_LocalPosition: {x: 0.0001500029, y: 0.000017584522, z: 0.014662967}
-  m_LocalScale: {x: 0.01023134, y: 0.0106749395, z: 0.0017999931}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.20300293, y: 4.991, z: 5.069155}
+  m_LocalScale: {x: 2.0462735, y: 2.0175688, z: 0.18579684}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6341689106027801710}
+  m_Father: {fileID: 3488899881844328929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8857824655896902100
 MeshFilter:
@@ -8772,12 +8772,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8209508752597101848}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5000003, y: -0.49999976, z: -0.49999976, w: 0.5000003}
-  m_LocalPosition: {x: 0.00015001722, y: -0.014987378, z: 0.0049999887}
-  m_LocalScale: {x: 0.01986787, y: 0.029999921, z: 0.0017999931}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.2040024, y: 3, z: 5.069157}
+  m_LocalScale: {x: 3.9735842, y: 6, z: 0.18579684}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6341689106027801710}
+  m_Father: {fileID: 3488899881844328929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4868637230716731587
 MeshFilter:
@@ -9093,6 +9093,72 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &8586397973242118807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6776597625544903650}
+  - component: {fileID: 5715512322305366251}
+  - component: {fileID: 6094262112580811121}
+  m_Layer: 0
+  m_Name: MirrorTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6776597625544903650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8586397973242118807}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1663.0001, y: -0.34395233, z: 0.06605056}
+  m_LocalScale: {x: 2690.9412, y: 0.8720392, z: 2.2643454}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5589603048835404862}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5715512322305366251
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8586397973242118807}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6094262112580811121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8586397973242118807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a558db8bd2c979046aa30af230b17b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8642106560539563576
 GameObject:
   m_ObjectHideFlags: 0
@@ -9105,7 +9171,7 @@ GameObject:
   - component: {fileID: 7924966019158949962}
   - component: {fileID: 3994135732635731458}
   - component: {fileID: 5488089617038185778}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: toilet poster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9485,18 +9551,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 3488899881844328929}
     m_Modifications:
     - target: {fileID: 92919143270100721, guid: 5f60a8f816774a147bbf8428e6951d09, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.002
-      objectReference: {fileID: 0}
-    - target: {fileID: 92919143270100721, guid: 5f60a8f816774a147bbf8428e6951d09, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.293475
-      objectReference: {fileID: 0}
-    - target: {fileID: 92919143270100721, guid: 5f60a8f816774a147bbf8428e6951d09, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.7346509
-      objectReference: {fileID: 0}
-    - target: {fileID: 92919143270100721, guid: 5f60a8f816774a147bbf8428e6951d09, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.9696198
       objectReference: {fileID: 0}
@@ -9542,7 +9596,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 92919143270100721, guid: 5f60a8f816774a147bbf8428e6951d09, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6776597625544903650}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f60a8f816774a147bbf8428e6951d09, type: 3}
 --- !u!4 &5589603048835404862 stripped
