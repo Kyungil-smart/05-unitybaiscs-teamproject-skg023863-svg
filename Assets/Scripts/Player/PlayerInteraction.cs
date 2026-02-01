@@ -9,8 +9,11 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private Transform _origin;
     [SerializeField] private LayerMask _targeLayer;
     
+    private Camera _camera;
     private Ray _ray;
     private IInteractable _currentTarget;
+
+
 
     private void Update()
     {
@@ -21,6 +24,17 @@ public class PlayerInteraction : MonoBehaviour
             if(_currentTarget != null)
             _currentTarget.Interact();
         }
+    }
+
+    private void Awake()
+    {
+        Init();
+    }
+
+    private void Init()
+    {
+        _camera = Camera.main;
+        
     }
     private void OnDrawGizmos()
     {
