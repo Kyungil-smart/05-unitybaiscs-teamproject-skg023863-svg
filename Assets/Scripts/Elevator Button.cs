@@ -10,6 +10,7 @@ public class ElevatorButton : MonoBehaviour, IInteractable
     private ElevatorController _elevatorController;
     private GameManager _gamemanager;
 
+
     private void Start()
     {
         _elevatorController = GetComponentInParent<ElevatorController>();
@@ -20,5 +21,10 @@ public class ElevatorButton : MonoBehaviour, IInteractable
     {
         _elevatorController.ElevatorSequense();
         _gamemanager.OnPlayerChoice(choose);
+    }
+
+    public void LockOn(bool isLockOn)
+    {
+        
     }
 }

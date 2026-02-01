@@ -4,7 +4,9 @@ using UnityEngine;
 
 public interface IInteractable
 {
-    void Interact();
+    public void Interact();
+    public void LockOn(bool isLockOn);
+    
 }
 
 
