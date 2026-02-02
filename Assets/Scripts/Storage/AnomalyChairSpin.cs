@@ -13,6 +13,8 @@ public class AnomalyChairSpin : AnomalyBase
     {
         _originalPosition = transform.localPosition;
         _originalRotation = transform.localRotation;
+        Debug.Log(_originalPosition);
+        Debug.Log(_originalRotation);
     }
     
     protected override void OnAnomalyStart()
