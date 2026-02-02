@@ -6,9 +6,11 @@ using UnityEngine;
 public class OpenBono : MonoBehaviour
 {
     [SerializeField] private GameObject _bonoPrefab;
-    [SerializeField] private GameObject _doorPrefab;
+    [SerializeField] private GameObject _anomalyDoorPrefab;
+    [SerializeField] private GameObject _nomalDoorPrefab;
     [SerializeField] private float _rotateSpeed;
     [SerializeField] private float _moveSpeed;
+    private WaitForSeconds _oneSec = new WaitForSeconds(3f);
 
     private bool _isDoorOpen;
     private float _doorRotateMax = -75f;
@@ -19,13 +21,13 @@ public class OpenBono : MonoBehaviour
     private void Awake()
     {
         _bonoPrefab.SetActive(false);
-        _doorPrefab.SetActive(false);
+        _anomalyDoorPrefab.SetActive(false);
         gameObject.SetActive(false);
     }
 
     private void Start()
     {
-        _currentDoorRotate = _doorPrefab.transform.localEulerAngles.z;
+        _currentDoorRotate = _anomalyDoorPrefab.transform.localEulerAngles.z;
         _currentBonoMove = _bonoPrefab.transform.localPosition.x;
     }
 
@@ -36,7 +38,7 @@ public class OpenBono : MonoBehaviour
             if (_currentDoorRotate > _doorRotateMax)
             {
                 _currentDoorRotate -= _rotateSpeed * Time.deltaTime;
-                _doorPrefab.transform.localRotation = Quaternion.Euler(0f, 0f, _currentDoorRotate);
+                _anomalyDoorPrefab.transform.localRotation = Quaternion.Euler(0f, 0f, _currentDoorRotate);
             }
         }
 
@@ -54,25 +56,33 @@ public class OpenBono : MonoBehaviour
         }
     }
 
+    private IEnumerator OpenDelay()
+    {
+        yield return _oneSec;
+        _isDoorOpen = true;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("door"))
         {
-            _isDoorOpen = true;
+            StartCoroutine(OpenDelay());
         }
     }
 
     protected virtual void OnAnomalyStart()
     {
         _bonoPrefab.SetActive(true);
-        _doorPrefab.SetActive(true);
+        _anomalyDoorPrefab.SetActive(true);
+        _nomalDoorPrefab.SetActive(false);
         gameObject.SetActive(true);
     }
 
     protected virtual void OnAnomalyEnd()
     {
         _bonoPrefab.SetActive(false);
-        _doorPrefab.SetActive(false);
+        _anomalyDoorPrefab.SetActive(false);
+        _nomalDoorPrefab.SetActive(true);
         gameObject.SetActive(false);
     }
 }
