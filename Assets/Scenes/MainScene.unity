@@ -567,6 +567,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &90542335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90542327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 90542327}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 90542327}
+  door_in_use: 0
 --- !u!1 &101477510
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,6 +673,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &109146766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109146758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 109146758}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 109146758}
+  door_in_use: 0
 --- !u!1 &120195207
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,6 +914,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 517560237370943295, guid: 92073c9e383fd714fa57e328f2d642cc, type: 3}
+      propertyPath: UseDoors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 517560237370943295, guid: 92073c9e383fd714fa57e328f2d642cc, type: 3}
+      propertyPath: UseDoors.Array.data[0].Door
+      value: 
+      objectReference: {fileID: 929574086}
+    - target: {fileID: 517560237370943295, guid: 92073c9e383fd714fa57e328f2d642cc, type: 3}
+      propertyPath: UseDoors.Array.data[0].OpenValue
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 517560237370943295, guid: 92073c9e383fd714fa57e328f2d642cc, type: 3}
+      propertyPath: UseDoors.Array.data[0].RotationOrigin
+      value: 
+      objectReference: {fileID: 929574086}
     - target: {fileID: 790343387477817095, guid: 92073c9e383fd714fa57e328f2d642cc, type: 3}
       propertyPath: m_Name
       value: Storage
@@ -1657,6 +1711,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &289420572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289420564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 289420564}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 289420564}
+  door_in_use: 0
 --- !u!1 &305068769
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,6 +2396,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &420754566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420754559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 420754559}
+    CloseValue: 0
+    OpenValue: 88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 1001007324}
+  door_in_use: 0
 --- !u!1 &423079398
 GameObject:
   m_ObjectHideFlags: 0
@@ -2415,34 +2507,66 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6456751232787378038, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
+    - {fileID: 2601752322461649077, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
+    - {fileID: 5593902739714721881, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
+    - {fileID: 5364379171224298694, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
+    - {fileID: 3533026443351787434, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
+    - {fileID: 6031313782818393679, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
+    - {fileID: 4108125710317549617, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
+    - {fileID: 5166909000648008536, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3501529978084892686, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1958012002}
+    - targetCorrespondingSourceObject: {fileID: 3501529978084892686, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1958012008}
     - targetCorrespondingSourceObject: {fileID: 5918783020942551531, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1447820686}
+    - targetCorrespondingSourceObject: {fileID: 5918783020942551531, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1447820692}
     - targetCorrespondingSourceObject: {fileID: 4076536886071025557, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 776830196}
+    - targetCorrespondingSourceObject: {fileID: 4076536886071025557, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 776830202}
     - targetCorrespondingSourceObject: {fileID: 5490365980539219965, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1982855420}
+    - targetCorrespondingSourceObject: {fileID: 5490365980539219965, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1982855426}
     - targetCorrespondingSourceObject: {fileID: 2705394340283674385, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1916244883}
+    - targetCorrespondingSourceObject: {fileID: 2705394340283674385, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1916244889}
     - targetCorrespondingSourceObject: {fileID: 5467968414636966754, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 530796908}
+    - targetCorrespondingSourceObject: {fileID: 5467968414636966754, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 530796914}
     - targetCorrespondingSourceObject: {fileID: 5054365334540027132, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 109146760}
+    - targetCorrespondingSourceObject: {fileID: 5054365334540027132, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 109146766}
     - targetCorrespondingSourceObject: {fileID: 6343493780939658928, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1580959654}
+    - targetCorrespondingSourceObject: {fileID: 6343493780939658928, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1580959660}
   m_SourcePrefab: {fileID: 100100000, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
 --- !u!1 &440029631 stripped
 GameObject:
@@ -2684,6 +2808,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &475119653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475119645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 475119645}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 475119645}
+  door_in_use: 0
 --- !u!1 &478562058
 GameObject:
   m_ObjectHideFlags: 0
@@ -2814,6 +2957,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &530796914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530796906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 530796906}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 530796906}
+  door_in_use: 0
 --- !u!1 &551827031
 GameObject:
   m_ObjectHideFlags: 0
@@ -3628,6 +3790,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &776830202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776830194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 776830194}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 776830194}
+  door_in_use: 0
 --- !u!1 &787723693
 GameObject:
   m_ObjectHideFlags: 0
@@ -4960,6 +5141,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: 784faa44222aa9b45a5eed45c625c729, type: 3}
+--- !u!1 &1001007324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2478127589210489165, guid: 98710f6bcd755fd478ad42128f017dc7, type: 3}
+  m_PrefabInstance: {fileID: 1295392176}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1007068180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6197,6 +6383,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1245877713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245877704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 1245877704}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 1245877704}
+  door_in_use: 0
 --- !u!1 &1252124239
 GameObject:
   m_ObjectHideFlags: 0
@@ -6713,7 +6918,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2591103320569805469, guid: 98710f6bcd755fd478ad42128f017dc7, type: 3}
+    - {fileID: 2591935586891106139, guid: 98710f6bcd755fd478ad42128f017dc7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -6723,9 +6930,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2477986119286488959, guid: 98710f6bcd755fd478ad42128f017dc7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 420754560}
+    - targetCorrespondingSourceObject: {fileID: 2477986119286488959, guid: 98710f6bcd755fd478ad42128f017dc7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 420754566}
     - targetCorrespondingSourceObject: {fileID: 2478847654705503923, guid: 98710f6bcd755fd478ad42128f017dc7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1637790870}
+    - targetCorrespondingSourceObject: {fileID: 2478847654705503923, guid: 98710f6bcd755fd478ad42128f017dc7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1637790876}
   m_SourcePrefab: {fileID: 100100000, guid: 98710f6bcd755fd478ad42128f017dc7, type: 3}
 --- !u!4 &1295392177 stripped
 Transform:
@@ -7771,6 +7984,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1447820692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447820684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 1447820684}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 1447820684}
+  door_in_use: 0
 --- !u!1 &1501134392
 GameObject:
   m_ObjectHideFlags: 0
@@ -7949,7 +8181,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5222634713719544005, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -7959,6 +8192,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8382476603185084380, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2061627893}
+    - targetCorrespondingSourceObject: {fileID: 8382476603185084380, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2061627899}
   m_SourcePrefab: {fileID: 100100000, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
 --- !u!1 &1555896585
 GameObject:
@@ -8117,6 +8353,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1580959660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580959652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 1580959652}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 1580959652}
+  door_in_use: 0
 --- !u!1 &1618554142
 GameObject:
   m_ObjectHideFlags: 0
@@ -8245,6 +8500,11 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!1 &1630722343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2478891984817228757, guid: 98710f6bcd755fd478ad42128f017dc7, type: 3}
+  m_PrefabInstance: {fileID: 1295392176}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1637790868 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2478847654705503923, guid: 98710f6bcd755fd478ad42128f017dc7, type: 3}
@@ -8268,6 +8528,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1637790876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637790868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 1637790868}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 1630722343}
+  door_in_use: 0
 --- !u!1 &1658590827
 GameObject:
   m_ObjectHideFlags: 0
@@ -8459,25 +8738,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: toiletroom M
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5117674414060300836, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
+    - {fileID: 7043418602488414068, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
+    - {fileID: 6854757283161250615, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
+    - {fileID: 790441359538466479, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
+    - {fileID: 6771890612271639546, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
+    - {fileID: 5881169671231409951, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6930764695038662864, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2074256617}
+    - targetCorrespondingSourceObject: {fileID: 6930764695038662864, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2074256623}
+    - targetCorrespondingSourceObject: {fileID: 7136772959489803204, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2094884196}
     - targetCorrespondingSourceObject: {fileID: 821920232623507723, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
       insertIndex: -1
       addedObject: {fileID: 90542329}
+    - targetCorrespondingSourceObject: {fileID: 821920232623507723, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 90542335}
     - targetCorrespondingSourceObject: {fileID: 6659324666025004126, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
       insertIndex: -1
       addedObject: {fileID: 475119647}
+    - targetCorrespondingSourceObject: {fileID: 6659324666025004126, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 475119653}
     - targetCorrespondingSourceObject: {fileID: 5768590528428288187, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
       insertIndex: -1
       addedObject: {fileID: 289420566}
+    - targetCorrespondingSourceObject: {fileID: 5768590528428288187, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 289420572}
     - targetCorrespondingSourceObject: {fileID: 5086746744507519970, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2121238084}
+    - targetCorrespondingSourceObject: {fileID: 5086746744507519970, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2121238090}
   m_SourcePrefab: {fileID: 100100000, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
 --- !u!1 &1696349967
 GameObject:
@@ -9310,6 +9613,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1916244889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916244881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 1916244881}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 1916244881}
+  door_in_use: 0
 --- !u!1 &1929230714
 GameObject:
   m_ObjectHideFlags: 0
@@ -9757,6 +10079,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1958012008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958012000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 1958012000}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 1958012000}
+  door_in_use: 0
 --- !u!1001 &1958653324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9817,7 +10158,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5460380186481105866, guid: ec83d30f23ad90a49ad56d890d40fbf1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -9827,6 +10169,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7882869796748926183, guid: ec83d30f23ad90a49ad56d890d40fbf1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1245877706}
+    - targetCorrespondingSourceObject: {fileID: 7882869796748926183, guid: ec83d30f23ad90a49ad56d890d40fbf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1245877713}
   m_SourcePrefab: {fileID: 100100000, guid: ec83d30f23ad90a49ad56d890d40fbf1, type: 3}
 --- !u!1 &1962724794
 GameObject:
@@ -10009,6 +10354,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1982855426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982855418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 1982855418}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 1982855418}
+  door_in_use: 0
 --- !u!1 &1995984583 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7351504375644856293, guid: ec83d30f23ad90a49ad56d890d40fbf1, type: 3}
@@ -10149,6 +10513,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &2061627899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061627887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 2061627887}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 2061627887}
+  door_in_use: 0
 --- !u!1 &2074256615 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6930764695038662864, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
@@ -10172,6 +10555,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &2074256623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074256615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 2074256615}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 2074256615}
+  door_in_use: 0
 --- !u!1 &2077290483
 GameObject:
   m_ObjectHideFlags: 0
@@ -10467,6 +10869,30 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &2094884190 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7136772959489803204, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
+  m_PrefabInstance: {fileID: 1690589304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2094884196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094884190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 2094884190}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 2094884190}
+  door_in_use: 0
 --- !u!1 &2120273371
 GameObject:
   m_ObjectHideFlags: 0
@@ -10597,6 +11023,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &2121238090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121238082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 2121238082}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 2121238082}
+  door_in_use: 0
 --- !u!1 &2137606704
 GameObject:
   m_ObjectHideFlags: 0
