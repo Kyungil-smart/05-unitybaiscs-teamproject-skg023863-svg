@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RotatingAnomaly : AnomalyBase
+public class RotatingAnomaly1 : AnomalyBase
 {
     [Header("회전 설정")]
     [SerializeField] private Vector3 _rotationAxis = Vector3.up;
