@@ -2240,10 +2240,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainPanel: {fileID: 591842253}
   _optionsPanel: {fileID: 685259416}
-  _volumeSlider: {fileID: 0}
-  _uiAudioSource: {fileID: 0}
-  _clickSound: {fileID: 0}
-  clickVolume: 1
+  _volumeSlider: {fileID: 1081588535}
+  _uiAudioSource: {fileID: 1866271911}
+  _clickSound: {fileID: 8300000, guid: 2896acf448f016d468fea899c6db4ec5, type: 3}
+  clickVolume: 0.2
 --- !u!114 &1866271910
 MonoBehaviour:
   m_ObjectHideFlags: 0
