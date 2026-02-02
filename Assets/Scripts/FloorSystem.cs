@@ -24,36 +24,26 @@ public class FloorSystem : MonoBehaviour
     public void InitializeFloorSystem()
     {
         _currentFloor = _startFloor;
-        if (_elevatorController != null)
-            _elevatorController.SetFloorText(_currentFloor);
+        _elevatorController.SetFloorText(_currentFloor);
     }
 
     public void GoDownOneFloor()
     {
         _currentFloor--;
-
-        if (_elevatorController != null)
-            _elevatorController.SetFloorText(_currentFloor);
-
+        _elevatorController.SetFloorText(_currentFloor);
         PlayArriveSound();
     }
 
     public void ResetToStartFloor()
     {
         _currentFloor = _startFloor;
-
-        if (_elevatorController != null)
-            _elevatorController.SetFloorText(_currentFloor);
-
+        _elevatorController.SetFloorText(_currentFloor);
         PlayArriveSound();
     }
 
     private void PlayArriveSound()
     {
-        if (arriveSound != null && _myAudio != null)
-        {
-            _myAudio.PlayOneShot(arriveSound, arriveVolume);
-        }
+        _myAudio.PlayOneShot(arriveSound, arriveVolume);
     }
 
     public bool IsTargetReached()
