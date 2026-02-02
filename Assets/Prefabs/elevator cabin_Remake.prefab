@@ -118,7 +118,8 @@ GameObject:
   - component: {fileID: 916746658905864359}
   - component: {fileID: 2109411701920998825}
   - component: {fileID: 144033767465319530}
-  m_Layer: 0
+  - component: {fileID: 6700831514263137371}
+  m_Layer: 3
   m_Name: Button Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,6 +227,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choose: 0
+--- !u!114 &6700831514263137371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2415827488384159414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2610051592365545714
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8801549099870395501}
   m_Layer: 0
-  m_Name: elevator cabin
+  m_Name: elevator cabin_Remake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -754,7 +773,8 @@ GameObject:
   - component: {fileID: 8037698441387407746}
   - component: {fileID: 5439240940543240051}
   - component: {fileID: 2184039387566274914}
-  m_Layer: 0
+  - component: {fileID: 5329873217583527294}
+  m_Layer: 3
   m_Name: Button Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,6 +882,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choose: 1
+--- !u!114 &5329873217583527294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7318973372737910391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &8076363898664400724
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,6 +914,7 @@ GameObject:
   - component: {fileID: 5922255776148410403}
   - component: {fileID: 7454513525986617020}
   - component: {fileID: 3712774584157300555}
+  - component: {fileID: 2531621418270620058}
   m_Layer: 0
   m_Name: elevator cabin
   m_TagString: Untagged
@@ -985,8 +1024,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d6044044f465149adea8af41323aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 2
   _textMeshPro: {fileID: 1489486381772054786}
+  _audioSource: {fileID: 2531621418270620058}
+  _elevDoorSound: {fileID: 8300000, guid: a598703de69a59446a37497ece3f5840, type: 3}
+  _soundVolum: 1
 --- !u!95 &3712774584157300555
 Animator:
   serializedVersion: 5
@@ -1008,3 +1049,99 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!82 &2531621418270620058
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8076363898664400724}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: b23f5d035d53bc441900547af2573db2, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

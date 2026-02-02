@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class BottleRoket : AnomalyBase
+public class BottleRoket : AnomalyBase, IInteractable
 {
     private Animator _animator;
     private WaitForSeconds _delay = new WaitForSeconds(0.01f);
@@ -12,7 +12,7 @@ public class BottleRoket : AnomalyBase
     private void Awake()
     {
         _animator = GetComponent<Animator>();
-        
+        gameObject.layer = 0;
     }
 
     void Start()
@@ -36,16 +36,27 @@ public class BottleRoket : AnomalyBase
         yield break;
     }
 
-    // player lockon 구현 후 추가 구현 필요
-
     protected override void OnAnomalyStart()
     {
         _animator.enabled = true;
+        gameObject.layer = 3;
     }
 
     protected override void OnAnomalyEnd()
     {
         gameObject.SetActive(true);
         StartCoroutine(EndSequens());
+    }
+
+    void IInteractable.Interact()
+    {
+        if (!_animator.enabled)
+            return;
+        _animator.SetBool("isWatter", true);
+    }
+
+    void IInteractable.LockOn(bool isLockOn)
+    {
+        
     }
 }

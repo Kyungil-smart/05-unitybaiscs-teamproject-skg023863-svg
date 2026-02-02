@@ -10,6 +10,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AnomalyManager _anomalyManager;
     [SerializeField] private ElevatorController _elevatorController;
 
+    [Header("오디오 설정 (직접 재생)")]
+    [SerializeField] private AudioSource _myAudio;
+    [SerializeField] private AudioClip buttonFeedbackSound;
+    [SerializeField] private AudioClip elevatorMoveSound;
+    [Range(0f, 1f)] public float buttonVolume = 1f;
+    [Range(0f, 1f)] public float moveVolume = 0.5f;
+
     [Header("설정")]
     [SerializeField] private float _elevatorTravelTime = 3.0f;
     [SerializeField] private float _displayResultTime = 2.0f;
@@ -21,6 +28,8 @@ public class GameManager : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+
+        if (_myAudio == null) _myAudio = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -44,24 +53,32 @@ public class GameManager : MonoBehaviour
     {
         _isBusy = true;
 
-        if (AudioManager.Instance != null)
+        if (buttonFeedbackSound != null && _myAudio != null)
         {
-            AudioManager.Instance.PlayButtonSound();
-            AudioManager.Instance.SetElevatorMoveSound(true);
+            _myAudio.PlayOneShot(buttonFeedbackSound, buttonVolume);
+        }
+
+        if (elevatorMoveSound != null && _myAudio != null)
+        {
+            _myAudio.clip = elevatorMoveSound;
+            _myAudio.loop = true;
+            _myAudio.volume = moveVolume;
+            _myAudio.Play();
         }
 
         yield return new WaitForSeconds(_elevatorTravelTime);
 
-        if (AudioManager.Instance != null)
+        ResetAllDoors();
+
+        if (_myAudio != null && _myAudio.clip == elevatorMoveSound)
         {
-            AudioManager.Instance.SetElevatorMoveSound(false);
-            AudioManager.Instance.PlayArrivalSound();
+            _myAudio.Stop();
+            _myAudio.loop = false;
         }
 
         if (_isFirstSection)
         {
-            _isFirstSection = false;
-            _floorSystem.GoDownOneFloor();
+            _isFirstSection = false; 
         }
         else
         {
@@ -70,7 +87,7 @@ public class GameManager : MonoBehaviour
             else
                 _floorSystem.ResetToStartFloor();
         }
-
+        
         if (_elevatorController != null)
             _elevatorController.SetFloorText(_floorSystem.CurrentFloor);
 
@@ -90,5 +107,14 @@ public class GameManager : MonoBehaviour
         }
 
         _isBusy = false;
+    }
+
+    private void ResetAllDoors()
+    {
+        Door[] allDoors = FindObjectsOfType<Door>();
+        foreach (Door door in allDoors)
+        {
+            door.ResetDoor();
+        }
     }
 }

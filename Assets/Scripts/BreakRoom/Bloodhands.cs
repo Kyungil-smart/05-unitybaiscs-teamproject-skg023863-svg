@@ -5,5 +5,13 @@ using UnityEngine;
 
 public class Bloodhands : AnomalyBase
 {
-    
+    protected override void OnAnomalyStart()
+    {
+        gameObject.SetActive(true);
+    }
+
+    protected override void OnAnomalyEnd()
+    {
+        gameObject.SetActive(false);
+    }
 }

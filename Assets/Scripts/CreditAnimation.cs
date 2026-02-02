@@ -9,6 +9,7 @@ public class CreditAnimation : MonoBehaviour
     [SerializeField] private float _creditSpeed;
     private bool _isInCredit =  true;
     private SceneFlowManager _sceneFlowManager;
+    private WaitForSeconds _twoSec = new WaitForSeconds(2.5f);
 
     private void Awake()
     {
@@ -27,17 +28,24 @@ public class CreditAnimation : MonoBehaviour
         
         EndCredit();
         
-        if (gameObject.transform.position.y > 3300f)
+        if (gameObject.transform.position.y > 3000f)
         {
             Debug.Log("크레딧 끝");
             _isInCredit = false;
             // 자동으로 씬을 메인화면 씬으로 전환 시켜주는 기능을 넣어야함 
-            _sceneFlowManager.LoadScene(SceneType.Title);
+            StartCoroutine(EndScene());
         }
+    }
+
+    private IEnumerator EndScene()
+    {
+        yield return _twoSec;
+        _sceneFlowManager.LoadScene(SceneType.Title);
     }
 
     private void EndCredit()
     {
+        // 유저가 크레딧 버튼을 누르면 메인메뉴로 이동
         if (Input.anyKeyDown)
         {
             _isInCredit = false;
@@ -48,8 +56,6 @@ public class CreditAnimation : MonoBehaviour
 
     private void CreditUp()
     {
-        
-        // 유저가 크레딧 버튼을 누르거나 게임을 클리어시 크레딧 씬으로 전환하여 동작
         if(_isInCredit)
         {
             transform.Translate(Vector3.up * _creditSpeed * Time.deltaTime);
