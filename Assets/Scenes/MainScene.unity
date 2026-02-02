@@ -2586,6 +2586,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clock Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1499506908776084, guid: f95eb02e4b4e8cc42938637d6ff3c02b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612546874267180, guid: f95eb02e4b4e8cc42938637d6ff3c02b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4668773234907838, guid: f95eb02e4b4e8cc42938637d6ff3c02b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.461
@@ -2651,8 +2659,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae29e78c0c165f4fbef0c96f7efa34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotationAxis: {x: 0, y: 1, z: 0}
-  _rotationSpeed: -100
+  _rotationAxis: {x: 1, y: 0, z: 0}
+  _rotationSpeed: 100
 --- !u!1 &475119645 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6659324666025004126, guid: ed3a35f258bc87f459ab102d8c430e68, type: 3}
@@ -4039,6 +4047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 859259768}
   - component: {fileID: 859259767}
+  - component: {fileID: 859259769}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4061,6 +4070,11 @@ MonoBehaviour:
   _floorSystem: {fileID: 1846442183}
   _anomalyManager: {fileID: 752370005}
   _elevatorController: {fileID: 1510618881}
+  _myAudio: {fileID: 859259769}
+  buttonFeedbackSound: {fileID: 8300000, guid: 2896acf448f016d468fea899c6db4ec5, type: 3}
+  elevatorMoveSound: {fileID: 0}
+  buttonVolume: 0.2
+  moveVolume: 0.2
   _elevatorTravelTime: 3
   _displayResultTime: 2
 --- !u!4 &859259768
@@ -4078,6 +4092,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &859259769
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859259766}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &859828863 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990273713866970, guid: aa937497f8053b449b8c7563868401e1, type: 3}
@@ -5354,13 +5464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff47bad74f03c7640933d7346d5f2010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioMixer: {fileID: 0}
-  _sfxSource: {fileID: 0}
-  _movementSource: {fileID: 0}
-  _buttonClip: {fileID: 0}
-  _arrivalClip: {fileID: 0}
-  _elevatorMoveClip: {fileID: 0}
-  _doorSoundClip: {fileID: 0}
+  masterMixer: {fileID: 24100000, guid: b23f5d035d53bc441900547af2573db2, type: 2}
 --- !u!4 &1093949499
 Transform:
   m_ObjectHideFlags: 0
@@ -8857,6 +8961,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startFloor: 8
   _targetFloor: 1
+  _elevatorController: {fileID: 1510618881}
+  arriveSound: {fileID: 0}
+  arriveVolume: 0.3
 --- !u!4 &1846442184
 Transform:
   m_ObjectHideFlags: 0
