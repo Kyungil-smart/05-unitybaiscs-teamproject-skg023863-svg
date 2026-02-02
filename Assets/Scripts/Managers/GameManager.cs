@@ -78,8 +78,7 @@ public class GameManager : MonoBehaviour
 
         if (_isFirstSection)
         {
-            _isFirstSection = false;
-            _floorSystem.GoDownOneFloor();
+            _isFirstSection = false; 
         }
         else
         {
@@ -88,7 +87,7 @@ public class GameManager : MonoBehaviour
             else
                 _floorSystem.ResetToStartFloor();
         }
-
+        
         if (_elevatorController != null)
             _elevatorController.SetFloorText(_floorSystem.CurrentFloor);
 
