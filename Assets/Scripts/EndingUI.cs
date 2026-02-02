@@ -1,10 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class EndingUI : MonoBehaviour
 {
-    public void OnClickMainMenu()
+    private void Start()
     {
-        SceneManager.LoadScene("CreditScene");
+        StartCoroutine(GoToCreditRoutine());
+    }
+
+    private IEnumerator GoToCreditRoutine()
+    {
+        yield return new WaitForSeconds(2f);
+
+        SceneFlowManager.Instance.LoadCredit();
     }
 }

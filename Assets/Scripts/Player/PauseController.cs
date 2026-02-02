@@ -60,6 +60,6 @@ public class PauseController : MonoBehaviour
 
     public void GoMainMenu()
     {
-        SceneManager.LoadScene("LSH_MainMenu");
+        SceneFlowManager.Instance.LoadTitle();
     }
 }

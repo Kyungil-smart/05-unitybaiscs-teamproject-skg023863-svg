@@ -29,16 +29,15 @@ public class GameManager : MonoBehaviour
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
 
-        if (_myAudio == null) _myAudio = GetComponent<AudioSource>();
+        _myAudio = GetComponent<AudioSource>();
     }
 
     private void Start()
     {
         _isFirstSection = true;
         _floorSystem.InitializeFloorSystem();
-
-        if (_elevatorController != null)
-            _elevatorController.SetFloorText(_floorSystem.CurrentFloor);
+        
+        _elevatorController.SetFloorText(_floorSystem.CurrentFloor);
 
         _anomalyManager.PrepareAnomalySection(true);
     }
@@ -53,24 +52,18 @@ public class GameManager : MonoBehaviour
     {
         _isBusy = true;
 
-        if (buttonFeedbackSound != null && _myAudio != null)
-        {
-            _myAudio.PlayOneShot(buttonFeedbackSound, buttonVolume);
-        }
+        _myAudio.PlayOneShot(buttonFeedbackSound, buttonVolume);
 
-        if (elevatorMoveSound != null && _myAudio != null)
-        {
-            _myAudio.clip = elevatorMoveSound;
-            _myAudio.loop = true;
-            _myAudio.volume = moveVolume;
-            _myAudio.Play();
-        }
+        _myAudio.clip = elevatorMoveSound;
+        _myAudio.loop = true;
+        _myAudio.volume = moveVolume;
+        _myAudio.Play();
 
         yield return new WaitForSeconds(_elevatorTravelTime);
 
         ResetAllDoors();
 
-        if (_myAudio != null && _myAudio.clip == elevatorMoveSound)
+        if (_myAudio.clip == elevatorMoveSound)
         {
             _myAudio.Stop();
             _myAudio.loop = false;
@@ -88,20 +81,17 @@ public class GameManager : MonoBehaviour
                 _floorSystem.ResetToStartFloor();
         }
         
-        if (_elevatorController != null)
-            _elevatorController.SetFloorText(_floorSystem.CurrentFloor);
+        _elevatorController.SetFloorText(_floorSystem.CurrentFloor);
 
         _anomalyManager.PrepareAnomalySection(false);
 
-        if (_elevatorController != null)
-            _elevatorController.ElevatorSequense();
+        _elevatorController.ElevatorSequense();
 
         if (_floorSystem.IsTargetReached())
         {
             yield return new WaitForSeconds(_displayResultTime);
             
-            if (SceneFlowManager.Instance != null) 
-                SceneFlowManager.Instance.LoadEnding();
+            SceneFlowManager.Instance.LoadEnding();
             
             yield break;
         }
