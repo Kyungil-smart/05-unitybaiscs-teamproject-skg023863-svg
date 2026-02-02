@@ -61,19 +61,20 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
 
-
         // 왼쪽 Shift 누르면 달리기
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
 
         // 입력이 있을때만 달리기 속도 적용
         float speed = isRunning ? _runSpeed : _moveSpeed;
 
-        Vector3 velocity = 
-        transform.right * x * speed + transform.forward * z * speed;
+        Vector3 direction = 
+        (transform.right * x + transform.forward * z).normalized;
 
+        Vector3 velocity = direction * speed;
         velocity.y = _rigidbody.velocity.y;
 
         _rigidbody.velocity = velocity;
+
         /*Vector3 movement = (transform.right * x + transform.forward * z).normalized;
         transform.position += movement * (speed * Time.deltaTime);*/
     }
