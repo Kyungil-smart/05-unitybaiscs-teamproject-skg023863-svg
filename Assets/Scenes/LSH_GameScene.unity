@@ -3614,7 +3614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _anomalySpawnChance: 1
   _anomalyScripts:
-  - {fileID: 497582711}
+  - {fileID: 1512916227}
 --- !u!4 &752370006
 Transform:
   m_ObjectHideFlags: 0
@@ -8366,6 +8366,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 418559396236093290, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1848767080049409170, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -8378,7 +8382,15 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5109020164904986214, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5157739935883046118, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984379165584498229, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -8421,6 +8433,10 @@ PrefabInstance:
     - target: {fileID: 6712254341029654680, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
       propertyPath: m_Name
       value: WorkSpace_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6913167568020635366, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007662521458052923, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8481,6 +8497,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8382476603185084380, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2061627899}
+    - targetCorrespondingSourceObject: {fileID: 5109020164904986214, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1512916227}
     - targetCorrespondingSourceObject: {fileID: 1848767080049409170, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 497582711}
@@ -8488,6 +8507,25 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2082972079}
   m_SourcePrefab: {fileID: 100100000, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
+--- !u!1 &1512916226 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5109020164904986214, guid: aa6f08d20690d124cba05c8b159397b7, type: 3}
+  m_PrefabInstance: {fileID: 1512916225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1512916227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512916226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac86992068cb9034f8ef6698bb03beeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scalePerSecond: {x: 0, y: 0.01, z: 0}
+  _maxScale: {x: 1, y: 2, z: 1}
 --- !u!1 &1555896585
 GameObject:
   m_ObjectHideFlags: 0
