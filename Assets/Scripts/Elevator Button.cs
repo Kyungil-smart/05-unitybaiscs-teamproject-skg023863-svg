@@ -7,6 +7,8 @@ public class ElevatorButton : MonoBehaviour, IInteractable
 {
     [SerializeField] private PlayerChoice choose;
 
+    [SerializeField] private TriggerController _elevatorPlace;
+
     private ElevatorController _elevatorController;
 
     private GameManager _gamemanager;
@@ -21,6 +23,8 @@ public class ElevatorButton : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if(!_elevatorPlace.IsPlayerInside) return;
+        
         _elevatorController.ElevatorSequense();
         _gamemanager.OnPlayerChoice(choose);
     }
@@ -29,4 +33,5 @@ public class ElevatorButton : MonoBehaviour, IInteractable
     {
         
     }
+
 }
