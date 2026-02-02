@@ -12,7 +12,7 @@ public class BottleRoket : AnomalyBase, IInteractable
     private void Awake()
     {
         _animator = GetComponent<Animator>();
-        
+        gameObject.layer = 0;
     }
 
     void Start()
@@ -39,6 +39,7 @@ public class BottleRoket : AnomalyBase, IInteractable
     protected override void OnAnomalyStart()
     {
         _animator.enabled = true;
+        gameObject.layer = 3;
     }
 
     protected override void OnAnomalyEnd()
@@ -49,6 +50,8 @@ public class BottleRoket : AnomalyBase, IInteractable
 
     void IInteractable.Interact()
     {
+        if (!_animator.enabled)
+            return;
         _animator.SetBool("isWatter", true);
     }
 
