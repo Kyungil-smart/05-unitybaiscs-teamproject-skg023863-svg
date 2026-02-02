@@ -7,7 +7,7 @@ public class Bloodhands : AnomalyBase
 {
     protected virtual void OnAnomalyStart()
     {
-        gameObject.SetActive(true);
+        
     }
 
     protected virtual void OnAnomalyEnd()

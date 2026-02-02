@@ -6,7 +6,7 @@ public class PlantWater : MonoBehaviour
 {
     protected virtual void OnAnomalyStart()
     {
-        gameObject.SetActive(true);
+        
     }
 
     protected virtual void OnAnomalyEnd()

@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class OpenBono : MonoBehaviour
 {
+    [Header("이상현상 오브젝트")]
     [SerializeField] private GameObject _bonoPrefab;
     [SerializeField] private GameObject _anomalyDoorPrefab;
     [SerializeField] private GameObject _nomalDoorPrefab;
+    
+    [Header("이상현상 제어속도")]
     [SerializeField] private float _rotateSpeed;
     [SerializeField] private float _moveSpeed;
     private WaitForSeconds _oneSec = new WaitForSeconds(3f);
@@ -22,7 +25,6 @@ public class OpenBono : MonoBehaviour
     {
         _bonoPrefab.SetActive(false);
         _anomalyDoorPrefab.SetActive(false);
-        gameObject.SetActive(false);
     }
 
     private void Start()
@@ -75,11 +77,11 @@ public class OpenBono : MonoBehaviour
         _bonoPrefab.SetActive(true);
         _anomalyDoorPrefab.SetActive(true);
         _nomalDoorPrefab.SetActive(false);
-        gameObject.SetActive(true);
     }
 
     protected virtual void OnAnomalyEnd()
     {
+        _isDoorOpen = false;
         _bonoPrefab.SetActive(false);
         _anomalyDoorPrefab.SetActive(false);
         _nomalDoorPrefab.SetActive(true);

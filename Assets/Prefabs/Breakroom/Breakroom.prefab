@@ -585,7 +585,7 @@ GameObject:
   - component: {fileID: 2464783534879337589}
   - component: {fileID: 2591935586891106139}
   - component: {fileID: 2487121210189307241}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Glass.012
   m_TagString: door
   m_Icon: {fileID: 0}
@@ -888,7 +888,7 @@ GameObject:
   - component: {fileID: 2464316299556446895}
   - component: {fileID: 2591103320569805469}
   - component: {fileID: 2487683752517195853}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Glass.013
   m_TagString: door
   m_Icon: {fileID: 0}
@@ -3404,7 +3404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9182818450096883212, guid: cd26937d559edf64985ec1e874c1500d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7900285747243855558, guid: cd26937d559edf64985ec1e874c1500d, type: 3}

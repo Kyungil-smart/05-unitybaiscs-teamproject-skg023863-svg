@@ -39,6 +39,8 @@ public class ShelfController : AnomalyBase
 
     protected virtual void OnAnomalyEnd()
     {
+        gameObject.SetActive(false);
+        
         if (!_isPlayerInRoom)
         { 
             _animator.ResetTrigger("isPlayerInRoom");

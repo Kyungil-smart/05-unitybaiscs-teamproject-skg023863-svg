@@ -293,8 +293,8 @@ PrefabInstance:
         \n\n\uD50C\uB808\uC774\uC5B4 \uC81C\uC791 \n\uD64D\uC815\uC625\n\n\uB808\uBCA8\uB514\uC790\uC778\n\uC5F0\uB3D9\uC900\n\uC774\uC0C1\uD604\n\uAE40\uB355\uD658
         \n\n\uC5D0\uC14B \n\uC624\uD53C\uC2A4 \uBE4C\uB529 https://assetstore.unity.com/packages/3d/environments/urban/polygon-office-building-82282
         \n\n\uC74C\uC545 \n\n\uD2B9\uBCC4 \uCD9C\uD604 \n\uBCF4\uB178\uBCF4\uB178
-        \n\uC7AC\uC131\uAC15\uC0AC\uB2D8 \n\nMade by Unity \n2026 6\uD300\n\n\n\n\n\n\n\nthank's
-        for playing our game\n"
+        \n\n\nMade by Unity \n2026 6\uD300\n\n\n\n\n\n\n\nthank's for playing our
+        game\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8574963009617007014, guid: 0adf54d5ad7757749b6ad422810cc203, type: 3}
       propertyPath: m_fontSize
