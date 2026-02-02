@@ -8,33 +8,35 @@ public class AnomalyChairSpin : AnomalyBase
     [SerializeField] [Range(0, 1000)]private float _SpinSpeed = 1000f;
     private Vector3 _originalPosition;
     private Quaternion _originalRotation;
-    private bool _isSpin;
 
     void Awake()
     {
-        _isSpin = false;
-        _originalPosition = transform.position;
-        _originalRotation = transform.rotation;
+        _originalPosition = transform.localPosition;
+        _originalRotation = transform.localRotation;
     }
     
     protected override void OnAnomalyStart()
     {
-        _isSpin = true;
-        ChairSpin();
+        
     }
 
     protected override void OnAnomalyEnd()
     {
-        _isSpin = false;
-        transform.position = _originalPosition;
-        transform.rotation = _originalRotation;
+        transform.localPosition = _originalPosition;
+        transform.localRotation = _originalRotation;
     }
     
     private void ChairSpin()
     {
-        if (_isSpin)
+        if (_isActive)
         {
-            transform.Rotate(Vector3.up * _SpinSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.forward * _SpinSpeed * Time.deltaTime);
         }
     }
+
+    private void Update()
+    {
+        ChairSpin();
+    }
+    
 }

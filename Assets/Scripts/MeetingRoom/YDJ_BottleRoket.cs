@@ -8,32 +8,37 @@ public class YDJ_BottleRoket : AnomalyBase
 {
     private Animator _animator;
     private WaitForSeconds _delay = new WaitForSeconds(0.01f);
-    private bool _isFly;
+    private Vector3 _originalPosition;
+    private Quaternion _originalRotation;
+    // private bool _isFly;
     [SerializeField] private WaterJet _waterJetParticles;
 
     private void Awake()
     { 
         _animator = GetComponent<Animator>();
+        _originalPosition = transform.localPosition;
+        _originalRotation = transform.localRotation;
     }
     
     void Start()
     { 
         _animator.SetBool("isWatter", false);
         _animator.enabled = false;
-        _isFly = false;
+        // _isFly = false;
         WaterJetStop();
     }
     
-    private void OnTriggerEnter(Collider other)
-    {
-        if (_isFly) return;
-        if (other.CompareTag("Player"))
-        {
-            _animator.enabled = true;
-            _isFly = true;
-            _animator.SetBool("isWatter", true);
-        }
-    }
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     if (!_isFly)
+    //     {
+    //         return;
+    //     }
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         WaterJetStart();
+    //     }
+    // }
     
     void EndAni()
     {
@@ -63,6 +68,8 @@ public class YDJ_BottleRoket : AnomalyBase
     protected override void OnAnomalyStart()
     {
         _animator.enabled = true;
+        // _isFly = true;
+        WaterJetStart();
     }
 
     protected override void OnAnomalyEnd()
