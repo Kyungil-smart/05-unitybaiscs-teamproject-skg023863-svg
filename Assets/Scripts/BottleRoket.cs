@@ -18,8 +18,7 @@ public class BottleRoket : AnomalyBase, IInteractable
     void Start()
     {
         _animator.SetBool("isWatter", false);
-        //_animator.enabled = false;
-        _animator.enabled = true;
+        _animator.enabled = false;
     }
 
     void EndAni()
