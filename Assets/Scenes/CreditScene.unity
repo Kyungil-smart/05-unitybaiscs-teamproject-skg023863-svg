@@ -280,7 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2605143785271628593, guid: 0adf54d5ad7757749b6ad422810cc203, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1232
+      value: -1135
       objectReference: {fileID: 0}
     - target: {fileID: 6717590799942833000, guid: 0adf54d5ad7757749b6ad422810cc203, type: 3}
       propertyPath: m_Name
@@ -288,13 +288,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8574963009617007014, guid: 0adf54d5ad7757749b6ad422810cc203, type: 3}
       propertyPath: m_text
-      value: "8\uCE35\n\n\uD504\uB85C\uC81D\uD2B8 \uD300\uC7A5 \n\uC5F0\uB3D9\uC900
-        \n\n\uCD1D\uAD04 \n\uBB38\uC870\uC601 \n\n\uBA54\uB2C8\uC800 \uC81C\uC791\n\uC774\uC2B9\uC5F4
-        \n\n\uD50C\uB808\uC774\uC5B4 \uC81C\uC791 \n\uD64D\uC815\uC625\n\n\uB808\uBCA8\uB514\uC790\uC778\n\uC5F0\uB3D9\uC900\n\uC774\uC0C1\uD604\n\uAE40\uB355\uD658
-        \n\n\uC5D0\uC14B \n\uC624\uD53C\uC2A4 \uBE4C\uB529 https://assetstore.unity.com/packages/3d/environments/urban/polygon-office-building-82282
-        \n\n\uC74C\uC545 \n\n\uD2B9\uBCC4 \uCD9C\uD604 \n\uBCF4\uB178\uBCF4\uB178
-        \n\n\nMade by Unity \n2026 6\uD300\n\n\n\n\n\n\n\nthank's for playing our
-        game\n"
+      value: "8\uCE35\n\n\uD504\uB85C\uC81D\uD2B8 \uD300\uC7A5 \n<size=15>\uC5F0\uB3D9\uC900</size>
+        \n\n\uCD1D\uAD04 \n<size=15>\uBB38\uC870\uC601</size> \n\n\uBA54\uB2C8\uC800
+        \uC81C\uC791\n<size=15>\uC774\uC2B9\uC5F4</size> \n\n\uD50C\uB808\uC774\uC5B4
+        \uC81C\uC791 \n<size=15>\uD64D\uC815\uC625</size>\n\n\uB808\uBCA8\uB514\uC790\uC778\n<size=15>\uC5F0\uB3D9\uC900\n\uC774\uC0C1\uD604\n\uAE40\uB355\uD658</size>
+        \n\n\uC5D0\uC14B \n<size=15>\uC624\uD53C\uC2A4 \uBE4C\uB529</size> <size=6>https://assetstore.unity.com/packages/3d/environments/urban/polygon-office-building-82282</size>\n\n\uC74C\uC545
+        \n<size=5>Music by <a href=\"https://pixabay.com/users/zemabeatz-43133737/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=198977\">Simone
+        Martino</a> from <a href=\"https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=198977\">Pixabay</a></size>\n\n\uD2B9\uBCC4
+        \uCD9C\uD604 \n\uBCF4\uB178\uBCF4\uB178 \n<size=2>\uAE40\uC7AC\uC131 \uAC15\uC0AC\uB2D8</size>\n\n<size=30>Made
+        by Unity</size> \n\n2026 6\uD300\n\n\n\n\n\n\n\nthank's for playing our game\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8574963009617007014, guid: 0adf54d5ad7757749b6ad422810cc203, type: 3}
       propertyPath: m_fontSize
@@ -397,6 +399,134 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0adf54d5ad7757749b6ad422810cc203, type: 3}
+--- !u!1 &1429918949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1429918951}
+  - component: {fileID: 1429918950}
+  m_Layer: 0
+  m_Name: ED Credit BGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1429918950
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429918949}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 18f7b5a557fcb64439f7495f0ebc36d4, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.05
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1429918951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429918949}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 301.1995, y: 471.40115, z: -13.816082}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1695608363
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,3 +629,4 @@ SceneRoots:
   - {fileID: 1695608365}
   - {fileID: 645684406}
   - {fileID: 520543780}
+  - {fileID: 1429918951}

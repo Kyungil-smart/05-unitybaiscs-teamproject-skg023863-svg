@@ -15,36 +15,30 @@ public class ShelfController : AnomalyBase
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && _isPlayerInRoom)
         {
-            _isPlayerInRoom = true;
+            Debug.Log("플레이어가 왔데요!");
+            _animator.SetTrigger("isPlayerInRoom");
         }
     }
     
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !_isPlayerInRoom)
         {
-            _isPlayerInRoom = false;
-        }
-    }
-
-    protected virtual void OnAnomalyStart()
-    {
-        if (_isPlayerInRoom)
-        { 
-            _animator.SetTrigger("isPlayerInRoom");
-        }
-    }
-
-    protected virtual void OnAnomalyEnd()
-    {
-        gameObject.SetActive(false);
-        
-        if (!_isPlayerInRoom)
-        { 
             _animator.ResetTrigger("isPlayerInRoom");
         }
-        
+    }
+
+    protected override void OnAnomalyStart()
+    {
+        gameObject.SetActive(true);
+       _isPlayerInRoom = true;
+    }
+
+    protected override void OnAnomalyEnd()
+    {
+        gameObject.SetActive(false);
+        _isPlayerInRoom = false;
     }
 }

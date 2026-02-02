@@ -2,14 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlantWater : MonoBehaviour
+public class PlantWater : AnomalyBase
 {
-    protected virtual void OnAnomalyStart()
+    private void Start()
     {
-        
+        gameObject.SetActive(false);
+    }
+    
+    protected override void OnAnomalyStart()
+    {
+        gameObject.SetActive(true);
     }
 
-    protected virtual void OnAnomalyEnd()
+    protected override void OnAnomalyEnd()
     {
         gameObject.SetActive(false);
     }
