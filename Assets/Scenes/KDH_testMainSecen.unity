@@ -3236,6 +3236,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 879cb87e1d568e0468212a4ef47d7ae3, type: 3}
+--- !u!114 &584836181 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1677176859211589531, guid: 98710f6bcd755fd478ad42128f017dc7, type: 3}
+  m_PrefabInstance: {fileID: 1295392176}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c519d4372f937f44ade548671d3971d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &595670433
 GameObject:
   m_ObjectHideFlags: 0
@@ -3498,7 +3509,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _anomalySpawnChance: 1
   _anomalyScripts:
-  - {fileID: 1183909653}
+  - {fileID: 584836181}
+  - {fileID: 2100198317}
 --- !u!4 &752370006
 Transform:
   m_ObjectHideFlags: 0
@@ -11010,6 +11022,17 @@ MonoBehaviour:
     isDoorOpen: 0
     RotationOrigin: {fileID: 2094884190}
   door_in_use: 0
+--- !u!114 &2100198317 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 376628199119796211, guid: 6728763b938980541abbd16d175ed2dc, type: 3}
+  m_PrefabInstance: {fileID: 431643717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a558db8bd2c979046aa30af230b17b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2120273371
 GameObject:
   m_ObjectHideFlags: 0
