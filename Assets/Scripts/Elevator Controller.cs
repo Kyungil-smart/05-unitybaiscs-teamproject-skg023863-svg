@@ -3,14 +3,11 @@ using UnityEngine;
 
 public class ElevatorController : MonoBehaviour
 {
-    [SerializeField] private float _speed;
-
     private Animator _animator;
 
     [SerializeField] private TextMeshProUGUI _textMeshPro;
 
     bool isClose;
-    //[SerializeField] private GameObject
 
     private void Awake()
     {
