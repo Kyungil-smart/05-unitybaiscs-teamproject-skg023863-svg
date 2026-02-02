@@ -8,6 +8,7 @@ public class ElevatorButton : MonoBehaviour, IInteractable
     [SerializeField] private PlayerChoice choose;
 
     private ElevatorController _elevatorController;
+
     private GameManager _gamemanager;
 
 
@@ -15,6 +16,7 @@ public class ElevatorButton : MonoBehaviour, IInteractable
     {
         _elevatorController = GetComponentInParent<ElevatorController>();
         _gamemanager = FindObjectOfType<GameManager>();
+        Debug.Log(_gamemanager);
     }
 
     public void Interact()

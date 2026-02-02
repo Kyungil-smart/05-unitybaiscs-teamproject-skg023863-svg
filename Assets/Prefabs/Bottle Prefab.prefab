@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 5593957009990947702}
   - component: {fileID: 6260616139799035016}
   - component: {fileID: 4064360873886766332}
-  m_Layer: 0
+  - component: {fileID: 7735535529007431106}
+  m_Layer: 3
   m_Name: Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,6 +141,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035256d81d3903a4aa6a4d8d392073e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7735535529007431106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15024696018634185}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2830037363292414892
 GameObject:
   m_ObjectHideFlags: 0

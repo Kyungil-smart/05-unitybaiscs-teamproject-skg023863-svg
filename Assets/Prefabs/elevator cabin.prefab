@@ -118,7 +118,8 @@ GameObject:
   - component: {fileID: 916746658905864359}
   - component: {fileID: 2109411701920998825}
   - component: {fileID: 144033767465319530}
-  m_Layer: 0
+  - component: {fileID: 4354448899084576588}
+  m_Layer: 3
   m_Name: Button Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,6 +227,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choose: 0
+--- !u!114 &4354448899084576588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2415827488384159414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2610051592365545714
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +773,8 @@ GameObject:
   - component: {fileID: 8037698441387407746}
   - component: {fileID: 5439240940543240051}
   - component: {fileID: 2184039387566274914}
-  m_Layer: 0
+  - component: {fileID: 1906225591979632345}
+  m_Layer: 3
   m_Name: Button Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,6 +882,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choose: 1
+--- !u!114 &1906225591979632345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7318973372737910391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &8076363898664400724
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,7 +1023,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d6044044f465149adea8af41323aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 2
   _textMeshPro: {fileID: 1489486381772054786}
 --- !u!95 &3712774584157300555
 Animator:

@@ -3,19 +3,18 @@ using UnityEngine;
 
 public class ElevatorController : MonoBehaviour
 {
-    [SerializeField] private float _speed;
-
+    [SerializeField] private TextMeshProUGUI _textMeshPro;
+    
     private Animator _animator;
 
-    [SerializeField] private TextMeshProUGUI _textMeshPro;
-
-    bool isClose;
-    //[SerializeField] private GameObject
+    private bool isFirst;
+    bool isOpen;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
-        isClose = _animator.GetBool("isClose");
+        isOpen = false;
+        isFirst = true;
     }
 
     /// <summary>
@@ -27,24 +26,25 @@ public class ElevatorController : MonoBehaviour
         _textMeshPro.SetText(floor.ToString());
     }
 
+    private void IsOpen()
+    {
+        isOpen = true;
+    }
+
     /// <summary>
     /// 만약 버튼이외에서 제어가 필요할 경우 호출할 수 있지만, 가급적 호출 지양
     /// </summary>
     public void ElevatorSequense()
     {
-        // 엘리베이터의 모든 애니메이션의 길이는 1.0 이기 때문에 하드 코딩
-        if (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
+        if (isFirst)
         {
-            if (isClose)
-            {
-                _animator.SetBool("isClose", false);
-                isClose = false;
-            }
-            else
-            {
-                _animator.SetBool("isClose", true);
-                isClose = true;
-            }
+            _animator.Play("DoorOpen");
+            isFirst = false;
+        }
+        else if (isOpen)
+        {
+            isOpen = false;
+            _animator.Play("DoorClose");
         }
     }
 }
