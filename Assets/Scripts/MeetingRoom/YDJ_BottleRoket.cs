@@ -6,12 +6,13 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class YDJ_BottleRoket : AnomalyBase
 {
+    [SerializeField] private WaterJet _waterJetParticles;
     private Animator _animator;
     private WaitForSeconds _delay = new WaitForSeconds(0.01f);
+    
     private Vector3 _originalPosition;
-    [SerializeField] private WaterJet _waterJetParticles;
-
-
+    private Quaternion _originalRotation;
+    
     private void Awake()
     { 
         _animator = GetComponent<Animator>();
@@ -21,7 +22,8 @@ public class YDJ_BottleRoket : AnomalyBase
     { 
         _animator.SetBool("isWatter", false); 
         _animator.enabled = false;
-        _originalPosition = transform.position;
+        _originalPosition = transform.localPosition;
+        _originalRotation = transform.localRotation;
         WaterJetStop();
     }
 
@@ -34,11 +36,12 @@ public class YDJ_BottleRoket : AnomalyBase
         _animator.SetBool("isWatter", true);
     }
     
-    
+    /*
     void EndAni()
     {
         gameObject.SetActive(false);
     }
+    */
 
     void WaterJetStart()
     {
@@ -54,31 +57,36 @@ public class YDJ_BottleRoket : AnomalyBase
     {
         _animator.Play("Idle");
         _animator.SetBool("isWatter", false);
+        
         yield return _delay;
         
         _animator.enabled = false;
+        transform.localPosition = _originalPosition;
+        transform.localRotation = _originalRotation;
+
         yield return _delay;
         
+        WaterJetStop();
         yield break;
     }
 
     IEnumerator SSS()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return _delay;
+        
         _animator.enabled = true;
-        transform.position = _originalPosition;
+        transform.localPosition = _originalPosition;
+        transform.localRotation = _originalRotation;
+        WaterJetStop();
     }
 
     protected override void OnAnomalyStart()
     {
         StartCoroutine(SSS());
-        WaterJetStop();
     }
 
     protected override void OnAnomalyEnd()
     {
-        gameObject.SetActive(true);
-        // StartCoroutine(EndSequens());
-        WaterJetStop();
+        StartCoroutine(EndSequens());
     }
 }

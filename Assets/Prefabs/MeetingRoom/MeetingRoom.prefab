@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 7776479315878245438}
   - component: {fileID: 7178086914755577040}
   - component: {fileID: 4405503466744439719}
-  - component: {fileID: 6653676160384935839}
   - component: {fileID: 5122013626070714465}
   - component: {fileID: 3055680419553656563}
   - component: {fileID: 8839728103674415403}
@@ -172,27 +171,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6653676160384935839
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279657354587484448}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.06, y: 0.05, z: 0.01}
-  m_Center: {x: -0.008, y: 0.0000000029103826, z: 0.0017937298}
 --- !u!95 &5122013626070714465
 Animator:
   serializedVersion: 5
@@ -5625,6 +5603,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1999078145624444855}
+  - component: {fileID: 4502022497318027721}
+  - component: {fileID: 5828848781119024469}
   m_Layer: 3
   m_Name: Anomaly Bottle Prefab
   m_TagString: Untagged
@@ -5648,6 +5628,40 @@ Transform:
   - {fileID: 7776479315878245438}
   m_Father: {fileID: 8375550325633485679}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4502022497318027721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3941052683603613509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cbef1f8e52079c418c01d17705643db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ydjBottleRoket: {fileID: 3055680419553656563}
+--- !u!65 &5828848781119024469
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3941052683603613509}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4, y: 1, z: 4}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4522015467086265882
 GameObject:
   m_ObjectHideFlags: 0
@@ -5972,6 +5986,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8375550325633485679}
+  - component: {fileID: 2120815850850274691}
   m_Layer: 0
   m_Name: MeetingRoom
   m_TagString: Untagged
@@ -6043,6 +6058,24 @@ Transform:
   - {fileID: 1999078145624444855}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2120815850850274691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7351504375644856293}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &7882869796748926183
 GameObject:
   m_ObjectHideFlags: 0
@@ -6057,6 +6090,8 @@ GameObject:
   - component: {fileID: 1841384634092173221}
   - component: {fileID: 7173766515714197203}
   - component: {fileID: 2207626580998062099}
+  - component: {fileID: 3869452423905999172}
+  - component: {fileID: 1873551712226605389}
   m_Layer: 3
   m_Name: Door.009
   m_TagString: door
@@ -6174,6 +6209,43 @@ BoxCollider:
   m_Size: {x: 0.0014685869, y: 0.009163196, z: 0.019497626}
   m_Center: {x: -0.000046657166, y: 0.0044898693, z: -0.0114458}
 --- !u!114 &2207626580998062099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882869796748926183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 7882869796748926183}
+    CloseValue: 0
+    OpenValue: -88
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 7882869796748926183}
+  door_in_use: 0
+--- !u!114 &3869452423905999172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882869796748926183}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &1873551712226605389
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
