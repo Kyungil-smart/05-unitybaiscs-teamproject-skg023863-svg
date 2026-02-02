@@ -10,7 +10,7 @@ public class RendererBlinkOverTime : AnomalyBase
     private Renderer _renderer;
     private WaitForSeconds _wait;
     private Coroutine _blinkCoroutine;
-
+    
     private void Awake()
     {
         Init();
@@ -33,10 +33,8 @@ public class RendererBlinkOverTime : AnomalyBase
 
     protected override void OnAnomalyStart()
     {
-        if (_blinkCoroutine == null)
-        {
-            _blinkCoroutine = StartCoroutine(Blink());    
-        }
+        if (_blinkCoroutine != null) return;
+        _blinkCoroutine = StartCoroutine(Blink());    
     }
 
     protected override void OnAnomalyEnd()
