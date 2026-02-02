@@ -20,7 +20,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         RayShot();
 
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
         {
             if(_currentTarget != null)
             _currentTarget.Interact();
