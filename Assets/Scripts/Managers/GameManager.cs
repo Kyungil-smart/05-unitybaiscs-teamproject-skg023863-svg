@@ -68,6 +68,8 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(_elevatorTravelTime);
 
+        ResetAllDoors();
+
         if (_myAudio != null && _myAudio.clip == elevatorMoveSound)
         {
             _myAudio.Stop();
@@ -106,5 +108,14 @@ public class GameManager : MonoBehaviour
         }
 
         _isBusy = false;
+    }
+
+    private void ResetAllDoors()
+    {
+        Door[] allDoors = FindObjectsOfType<Door>();
+        foreach (Door door in allDoors)
+        {
+            door.ResetDoor();
+        }
     }
 }
