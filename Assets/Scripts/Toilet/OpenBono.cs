@@ -13,7 +13,7 @@ public class OpenBono : AnomalyBase
     [Header("이상현상 제어속도")]
     [SerializeField] private float _rotateSpeed;
     [SerializeField] private float _moveSpeed;
-    private WaitForSeconds _oneSec = new WaitForSeconds(3f);
+    private WaitForSeconds _oneSec = new WaitForSeconds(1.5f);
 
     private bool _isDoorOpen;
     private float _doorRotateMax = -75f;
