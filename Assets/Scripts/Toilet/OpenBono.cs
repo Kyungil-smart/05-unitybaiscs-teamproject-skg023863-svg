@@ -1,0 +1,57 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class OpenBono : MonoBehaviour
+{
+    [SerializeField] private GameObject _bonoPrefab;
+    [SerializeField] private GameObject _doorPrefab;
+    [SerializeField] private float _rotateSpeed;
+    [SerializeField] private float _moveSpeed;
+
+    private bool _isDoorOpen;
+    private float _doorRotateMax = -75f;
+    private float _currentDoorRotate = 0f;
+    private float _bonoMoveMax = 0.6f;
+    private float _currentBonoMove = 0f;
+
+    private void Start()
+    {
+        _currentDoorRotate = _doorPrefab.transform.localEulerAngles.z;
+        _currentBonoMove = _bonoPrefab.transform.localPosition.x;
+    }
+
+    private void Update()
+    {
+        if (_isDoorOpen)
+        {
+            if (_currentDoorRotate > _doorRotateMax)
+            {
+                _currentDoorRotate -= _rotateSpeed * Time.deltaTime;
+                _doorPrefab.transform.localRotation = Quaternion.Euler(0f, 0f, _currentDoorRotate);
+            }
+        }
+
+        if (_isDoorOpen)
+        {
+            if (_currentBonoMove > _bonoMoveMax)
+            {
+                _currentBonoMove -= _moveSpeed * Time.deltaTime;
+                _bonoPrefab.transform.localPosition = new Vector3(_currentBonoMove,2.28f, 0.4913295f);
+            }
+        }
+        else
+        {
+            _isDoorOpen = false;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("door"))
+        {
+            _isDoorOpen = true;
+        }
+    }
+}
