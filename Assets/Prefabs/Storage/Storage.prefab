@@ -115,7 +115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1822748568883814418}
-  - component: {fileID: 5024774950076162328}
+  - component: {fileID: 1378919554399497523}
   m_Layer: 0
   m_Name: Storage
   m_TagString: Untagged
@@ -337,7 +337,7 @@ Transform:
   - {fileID: 8615374414664978387}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5024774950076162328
+--- !u!114 &1378919554399497523
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 517560237370943295}
   - component: {fileID: 9155386972295525765}
   - component: {fileID: 6505408108162317085}
-  - component: {fileID: 8389278647943984991}
+  - component: {fileID: 322322153909947954}
   m_Layer: 3
   m_Name: Door.009
   m_TagString: door
@@ -557,7 +557,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1533315825795070941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e7954b3afdba044799272ef7bf5c206, type: 3}
+  m_Script: {fileID: 11500000, guid: 86aaec04600a4564da625167776644c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseDoors:
@@ -610,7 +610,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0014685869, y: 0.009163196, z: 0.019497626}
   m_Center: {x: -0.000046657166, y: 0.0044898693, z: -0.0114458}
---- !u!114 &8389278647943984991
+--- !u!114 &322322153909947954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
