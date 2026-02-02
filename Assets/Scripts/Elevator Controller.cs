@@ -7,6 +7,7 @@ public class ElevatorController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _textMeshPro;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _elevDoorSound;
+    [SerializeField] private GameObject _wall;
     [SerializeField][Range(0,1)] private float _soundVolum;
     
     private Animator _animator;
@@ -20,6 +21,16 @@ public class ElevatorController : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         isOpen = false;
         isFirst = true;
+    }
+
+    private void OnBlock()
+    {
+        _wall.SetActive(true);
+    }
+
+    private void OffBlock()
+    {
+        _wall.SetActive(false);
     }
 
     /// <summary>
