@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/LSH_MainMenu.unity
+    path: Assets/Scenes/TitleScene.unity
     guid: 044429f778338f041aa9c86bc63fd7fd
   - enabled: 1
     path: Assets/Scenes/CreditScene.unity
     guid: a67b12847af1911409c6b8d96d47a8df
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
+    path: Assets/Scenes/GameScene.unity
     guid: b3997121af7321e42a9405c7c75c3787
   - enabled: 1
     path: Assets/Scenes/EndingScene.unity
