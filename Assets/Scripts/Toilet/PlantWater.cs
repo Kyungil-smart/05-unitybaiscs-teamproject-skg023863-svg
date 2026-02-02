@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bloodhands : AnomalyBase
+public class PlantWater : MonoBehaviour
 {
     protected virtual void OnAnomalyStart()
     {

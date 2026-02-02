@@ -16,6 +16,13 @@ public class OpenBono : MonoBehaviour
     private float _bonoMoveMax = 0.6f;
     private float _currentBonoMove = 0f;
 
+    private void Awake()
+    {
+        _bonoPrefab.SetActive(false);
+        _doorPrefab.SetActive(false);
+        gameObject.SetActive(false);
+    }
+
     private void Start()
     {
         _currentDoorRotate = _doorPrefab.transform.localEulerAngles.z;
@@ -53,5 +60,19 @@ public class OpenBono : MonoBehaviour
         {
             _isDoorOpen = true;
         }
+    }
+
+    protected virtual void OnAnomalyStart()
+    {
+        _bonoPrefab.SetActive(true);
+        _doorPrefab.SetActive(true);
+        gameObject.SetActive(true);
+    }
+
+    protected virtual void OnAnomalyEnd()
+    {
+        _bonoPrefab.SetActive(false);
+        _doorPrefab.SetActive(false);
+        gameObject.SetActive(false);
     }
 }
