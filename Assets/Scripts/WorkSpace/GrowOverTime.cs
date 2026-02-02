@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class GrowOverTime : AnomalyBase
 {
-    [Header("초당 성장")] [SerializeField] private Vector3 _scalePerSecond = new Vector3(0.01f, 0.01f, 0.01f);
+    [Header("초당 성장")] 
+    [SerializeField] private Vector3 _scalePerSecond = new Vector3(0.02f, 0.02f, 0.02f);
 
-    [Header("최대 크기 제한")] [SerializeField] private Vector3 _maxScale = new Vector3(10f, 7f, 10f);
+    [Header("최대 크기 제한")] 
+    [SerializeField] private Vector3 _maxScale = new Vector3(10f, 7f, 10f);
 
     private Coroutine _growthCoroutine;
     private Vector3 _originalLocalScale;
@@ -57,6 +59,8 @@ public class GrowOverTime : AnomalyBase
         }
 
         // 스케일 복구
-        transform.localScale = _originalLocalScale;
+        // AnomalyManager.Awake() Exit() 를 먼저 실행함
+        // transform.localScale = _originalLocalScale;
+        transform.localScale = Vector3.one;
     }
 }
