@@ -1,9 +1,13 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class ElevatorController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _textMeshPro;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _elevDoorSound;
+    [SerializeField][Range(0,1)] private float _soundVolum;
     
     private Animator _animator;
 
@@ -13,6 +17,7 @@ public class ElevatorController : MonoBehaviour
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
         isOpen = false;
         isFirst = true;
     }
@@ -29,6 +34,11 @@ public class ElevatorController : MonoBehaviour
     private void IsOpen()
     {
         isOpen = true;
+    }
+
+    private void ElevDoorSound()
+    {
+        _audioSource.PlayOneShot(_elevDoorSound, _soundVolum);
     }
 
     /// <summary>
