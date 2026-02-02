@@ -3608,6 +3608,7 @@ MonoBehaviour:
   _anomalySpawnChance: 1
   _anomalyScripts:
   - {fileID: 1463951516}
+  - {fileID: 0}
 --- !u!4 &752370006
 Transform:
   m_ObjectHideFlags: 0
@@ -6007,6 +6008,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 879cb87e1d568e0468212a4ef47d7ae3, type: 3}
+--- !u!1 &1128612641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1510463705484298, guid: 60703c96bc9c6524ab54de501c41d6a1, type: 3}
+  m_PrefabInstance: {fileID: 1331685662}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1128612645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128612641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b185daf932286fe419e85bc9027fc744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1132579450 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 790343387477817095, guid: 92073c9e383fd714fa57e328f2d642cc, type: 3}
@@ -7498,6 +7516,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toilet sign Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 4700281588171080, guid: 60703c96bc9c6524ab54de501c41d6a1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1744.615
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803717799116558, guid: 60703c96bc9c6524ab54de501c41d6a1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4803717799116558, guid: 60703c96bc9c6524ab54de501c41d6a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.959
@@ -7508,7 +7534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4803717799116558, guid: 60703c96bc9c6524ab54de501c41d6a1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.787
+      value: -7.941
       objectReference: {fileID: 0}
     - target: {fileID: 4803717799116558, guid: 60703c96bc9c6524ab54de501c41d6a1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7541,7 +7567,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1510463705484298, guid: 60703c96bc9c6524ab54de501c41d6a1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1128612645}
   m_SourcePrefab: {fileID: 100100000, guid: 60703c96bc9c6524ab54de501c41d6a1, type: 3}
 --- !u!1 &1340101088
 GameObject:
