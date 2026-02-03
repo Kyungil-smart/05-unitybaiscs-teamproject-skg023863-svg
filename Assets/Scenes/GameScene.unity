@@ -10015,6 +10015,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1334109979059158807, guid: 21c7146fce117c4429ac37e56e3ca799, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1334109979059158807, guid: 21c7146fce117c4429ac37e56e3ca799, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1334109979059158807, guid: 21c7146fce117c4429ac37e56e3ca799, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.287
       objectReference: {fileID: 0}
@@ -10074,6 +10082,10 @@ PrefabInstance:
       propertyPath: uiAudioSource
       value: 
       objectReference: {fileID: 2049963794}
+    - target: {fileID: 7844086200963381727, guid: 21c7146fce117c4429ac37e56e3ca799, type: 3}
+      propertyPath: m_Radius
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4103577684743435338, guid: 21c7146fce117c4429ac37e56e3ca799, type: 3}
