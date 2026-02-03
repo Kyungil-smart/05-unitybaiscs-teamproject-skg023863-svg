@@ -7,6 +7,7 @@ public class CreditAnimation : MonoBehaviour
 {
     [Header("크레딧 진행 속도")]
     [SerializeField] private float _creditSpeed;
+    [SerializeField] private float _creditEndY;
     private bool _isInCredit =  true;
     private SceneFlowManager _sceneFlowManager;
     private WaitForSeconds _twoSec = new WaitForSeconds(2.5f);
@@ -28,7 +29,7 @@ public class CreditAnimation : MonoBehaviour
         
         EndCredit();
         
-        if (gameObject.transform.position.y > 3000f)
+        if (gameObject.transform.position.y > _creditEndY)
         {
             Debug.Log("크레딧 끝");
             _isInCredit = false;
