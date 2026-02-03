@@ -45,6 +45,9 @@ public class RendererBlinkOverTime : AnomalyBase
             _blinkCoroutine = null;
         }
 
-        _renderer.enabled = true;
+        if (_renderer != null)
+        {
+            _renderer.enabled = true;
+        }
     }
 }

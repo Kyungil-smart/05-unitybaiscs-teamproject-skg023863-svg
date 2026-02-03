@@ -6,7 +6,7 @@ public class CursorOnMenu : MonoBehaviour
     [Header("커서")]
     [SerializeField] private Texture2D _cursor;
 
-    private void Awake()
+    private void Start()
     {
         Init();
     }

@@ -13,7 +13,14 @@ public class AnomalyManager : MonoBehaviour
     private void Awake()
     {
         _anomalies = _anomalyScripts.OfType<IAnomaly>().ToArray();
-        foreach (var a in _anomalies) a.Exit();
+    }
+
+    private void Start()
+    {
+        if (_anomalies != null)
+        {
+            foreach (var a in _anomalies) a.Exit();
+        }
     }
 
     public void PrepareAnomalySection(bool isForceNormal)
