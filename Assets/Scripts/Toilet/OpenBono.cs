@@ -21,11 +21,13 @@ public class OpenBono : AnomalyBase
     private float _bonoMoveMax = 0.6f;
     private float _currentBonoMove = 0f;
     
+    /*
     private void Awake()
     {
         _bonoPrefab.SetActive(false);
         _anomalyDoorPrefab.SetActive(false);
     }
+    */
 
     private void Update()
     {
