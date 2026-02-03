@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class AnomalyToiletSigns : AnomalyBase
 {
-    private Vector3 _originalScale;
-
-    private void Awake()
-    {
-        _originalScale = transform.localScale;
-    }
+    private Vector3 _originalScale = new Vector3(1744.615f, 1744.615f, 1744.615f);
+    
 
     protected override void OnAnomalyStart()
     {
-        Vector3 scale = _originalScale;
-        scale.y *= -1;
-        transform.localScale = scale;
+        transform.localScale = new Vector3(
+            _originalScale.x,
+            -_originalScale.y,
+            _originalScale.z
+        );
     }
 
     protected override void OnAnomalyEnd()
