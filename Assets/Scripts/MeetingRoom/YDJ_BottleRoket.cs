@@ -55,9 +55,6 @@ public class YDJ_BottleRoket : AnomalyBase
 
     IEnumerator EndSequens()
     {
-        _animator.Play("Idle");
-        _animator.SetBool("isWatter", false);
-        
         yield return _delay;
         
         _animator.enabled = false;
@@ -87,6 +84,12 @@ public class YDJ_BottleRoket : AnomalyBase
 
     protected override void OnAnomalyEnd()
     {
+        if (_animator != null)
+        {
+            _animator.Play("Idle2");
+            _animator.SetBool("isWatter", false);
+        }
+        
         StartCoroutine(EndSequens());
     }
 }
