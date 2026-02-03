@@ -238,21 +238,28 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -1135
       objectReference: {fileID: 0}
+    - target: {fileID: 4497370898365169929, guid: 0adf54d5ad7757749b6ad422810cc203, type: 3}
+      propertyPath: _creditEndY
+      value: 3200
+      objectReference: {fileID: 0}
     - target: {fileID: 6717590799942833000, guid: 0adf54d5ad7757749b6ad422810cc203, type: 3}
       propertyPath: m_Name
       value: Ending Credit
       objectReference: {fileID: 0}
     - target: {fileID: 8574963009617007014, guid: 0adf54d5ad7757749b6ad422810cc203, type: 3}
       propertyPath: m_text
-      value: "8\uCE35\n\n\uD504\uB85C\uC81D\uD2B8 \uD300\uC7A5 \n<size=15>\uC5F0\uB3D9\uC900</size>
-        \n\n\uCD1D\uAD04 \n<size=15>\uBB38\uC870\uC601</size> \n\n\uBA54\uB2C8\uC800
-        \uC81C\uC791\n<size=15>\uC774\uC2B9\uC5F4</size> \n\n\uD50C\uB808\uC774\uC5B4
-        \uC81C\uC791 \n<size=15>\uD64D\uC815\uC625</size>\n\n\uB808\uBCA8\uB514\uC790\uC778\n<size=15>\uC5F0\uB3D9\uC900\n\uC774\uC0C1\uD604\n\uAE40\uB355\uD658</size>
-        \n\n\uC5D0\uC14B \n<size=15>\uC624\uD53C\uC2A4 \uBE4C\uB529</size> <size=6>https://assetstore.unity.com/packages/3d/environments/urban/polygon-office-building-82282</size>\n\n\uC74C\uC545
-        \n<size=5>Music by <a href=\"https://pixabay.com/users/zemabeatz-43133737/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=198977\">Simone
-        Martino</a> from <a href=\"https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=198977\">Pixabay</a></size>\n\n\uD2B9\uBCC4
-        \uCD9C\uD604 \n\uBCF4\uB178\uBCF4\uB178 \n<size=2>\uAE40\uC7AC\uC131 \uAC15\uC0AC\uB2D8</size>\n\n<size=30>Made
-        by Unity</size> \n\n2026 6\uD300\n\n\n\n\n\n\n\nthank's for playing our game\n"
+      value: "<size=40>8\uCE35</size>\r\n\r\n\uD504\uB85C\uC81D\uD2B8 \uD300\uC7A5
+        \r\n<size=15>\uC5F0\uB3D9\uC900</size> \r\n\r\n\uCD1D\uAD04 \r\n<size=15>\uBB38\uC870\uC601</size>
+        \r\n\r\n\uBA54\uB2C8\uC800 \uC81C\uC791\r\n<size=15>\uC774\uC2B9\uC5F4</size>
+        \r\n\r\n\uD50C\uB808\uC774\uC5B4 \uC81C\uC791 \r\n<size=15>\uD64D\uC815\uC625</size>\r\n\r\n\uB808\uBCA8\uB514\uC790\uC778\r\n<size=15>\uC5F0\uB3D9\uC900\r\n\uC774\uC0C1\uD604\r\n\uAE40\uB355\uD658</size>
+        \r\n\r\n\uC5D0\uC14B \r\n<size=15>\uC624\uD53C\uC2A4 \uBE4C\uB529</size>
+        <size=6>https://assetstore.unity.com/packages/3d/environments/urban/polygon-office-building-82282</size>\r\n\r\n\uC74C\uC545
+        \r\n<size=5>Music by <a href=\"https://pixabay.com/users/zemabeatz-43133737/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=198977\">Simone
+        Martino</a> from <a href=\"https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=198977\">Pixabay</a></size>\r\n\r\n\uD2B9\uBCC4
+        \uCD9C\uD604 \r\n<size=15>\uBCF4\uB178\uBCF4\uB178\r\n\uD3EC\uB85C\uB9AC\r\n\uC0AC\uBB34\uB77C\uC774
+        \uB85C\uBD07\r\n\uD788\uC5B4\uB85C\uB9DB \uCFE0\uD0A4</size>\r\n<size=0.02>\uAE40\uC7AC\uC131
+        \uAC15\uC0AC\uB2D8</size>\r\n\r\n<size=30>Made by Unity</size> \r\n\r\n2026
+        6\uD300\r\n\r\n\r\n\r\n\r\n\r\nthank's for playing our game\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8574963009617007014, guid: 0adf54d5ad7757749b6ad422810cc203, type: 3}
       propertyPath: m_fontSize
