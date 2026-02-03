@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AnomalyManager _anomalyManager;
     [SerializeField] private ElevatorController _elevatorController;
 
-    [Header("오디오 설정 (직접 재생)")]
+    [Header("오디오 설정")]
     [SerializeField] private AudioSource _myAudio;
     [SerializeField] private AudioClip buttonFeedbackSound;
     [SerializeField] private AudioClip elevatorMoveSound;
@@ -36,9 +36,7 @@ public class GameManager : MonoBehaviour
     {
         _isFirstSection = true;
         _floorSystem.InitializeFloorSystem();
-        
         _elevatorController.SetFloorText(_floorSystem.CurrentFloor);
-
         _anomalyManager.PrepareAnomalySection(true);
     }
 
@@ -52,7 +50,8 @@ public class GameManager : MonoBehaviour
     {
         _isBusy = true;
 
-        _myAudio.PlayOneShot(buttonFeedbackSound, buttonVolume);
+        if (buttonFeedbackSound != null)
+            _myAudio.PlayOneShot(buttonFeedbackSound, buttonVolume);
 
         _myAudio.clip = elevatorMoveSound;
         _myAudio.loop = true;
@@ -60,6 +59,14 @@ public class GameManager : MonoBehaviour
         _myAudio.Play();
 
         yield return new WaitForSeconds(_elevatorTravelTime);
+
+        bool isCorrectChoice = false;
+        if (!_isFirstSection)
+        {
+            isCorrectChoice = _anomalyManager.IsPlayerChoiceCorrect(playerChoice);
+        }
+
+        _anomalyManager.PrepareAnomalySection(true);
 
         ResetAllDoors();
 
@@ -71,28 +78,25 @@ public class GameManager : MonoBehaviour
 
         if (_isFirstSection)
         {
-            _isFirstSection = false; 
+            _isFirstSection = false;
         }
         else
         {
-            if (_anomalyManager.IsPlayerChoiceCorrect(playerChoice))
+            if (isCorrectChoice)
                 _floorSystem.GoDownOneFloor();
             else
                 _floorSystem.ResetToStartFloor();
         }
-        
+
         _elevatorController.SetFloorText(_floorSystem.CurrentFloor);
 
         _anomalyManager.PrepareAnomalySection(false);
-
         _elevatorController.ElevatorSequense();
 
         if (_floorSystem.IsTargetReached())
         {
             yield return new WaitForSeconds(_displayResultTime);
-            
             SceneFlowManager.Instance.LoadEnding();
-            
             yield break;
         }
 
