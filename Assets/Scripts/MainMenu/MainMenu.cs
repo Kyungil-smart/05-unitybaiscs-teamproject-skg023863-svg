@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
@@ -16,56 +15,51 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
+        Screen.SetResolution(1920, 1080, true);
         Init();
-        if (_uiAudioSource == null) _uiAudioSource = GetComponent<AudioSource>();
+        _uiAudioSource = GetComponent<AudioSource>();
     }
 
     private void Init()
     {
-        if (_mainPanel != null) _mainPanel.SetActive(true);
-        if (_optionsPanel != null) _optionsPanel.SetActive(false);
+        _mainPanel.SetActive(true);
+        _optionsPanel.SetActive(false);
 
-        if (_volumeSlider != null)
-        {
-            _volumeSlider.minValue = 0.0001f;
-            _volumeSlider.maxValue = 1.0f;
-            _volumeSlider.value = 1.0f;
-            _volumeSlider.onValueChanged.AddListener(SetVolume);
-        }
+        _volumeSlider.minValue = 0.0001f;
+        _volumeSlider.maxValue = 1.0f;
+        _volumeSlider.value = 1.0f;
+        _volumeSlider.onValueChanged.AddListener(SetVolume);
     }
 
     private void PlayClickSound()
     {
-        if (_uiAudioSource != null && _clickSound != null)
-        {
-            _uiAudioSource.PlayOneShot(_clickSound, clickVolume);
-        }
+        _uiAudioSource.PlayOneShot(_clickSound, clickVolume);
     }
 
     public void OnClickStartGameButton()
     {
         PlayClickSound();
-        SceneManager.LoadScene("MainScene");
+        SceneFlowManager.Instance.LoadGame();
     }
     
     public void OnClickCreditsButton()
     {
         PlayClickSound();
-        SceneManager.LoadScene("CreditScene");
+        SceneFlowManager.Instance.LoadCredit();
     }
 
     public void OnClickOptionsButton()
     {
         PlayClickSound();
-        if (_mainPanel != null) _mainPanel.SetActive(false);
-        if (_optionsPanel != null) _optionsPanel.SetActive(true);
+        _mainPanel.SetActive(false);
+        _optionsPanel.SetActive(true);
     }
 
     public void OnClickCloseOptionsButton()
     {
         PlayClickSound();
-        if (_optionsPanel != null) _optionsPanel.SetActive(false);
-        if (_mainPanel != null) _mainPanel.SetActive(true);
+        _optionsPanel.SetActive(false);
+        _mainPanel.SetActive(true);
     }
     
     public void OnClickQuitGameButton()
@@ -80,9 +74,6 @@ public class MainMenu : MonoBehaviour
 
     public void SetVolume(float volume)
     {
-        if (AudioManager.Instance != null)
-        {
-            AudioManager.Instance.SetMasterVolume(volume);
-        }
+        AudioManager.Instance.SetMasterVolume(volume);
     }
 }

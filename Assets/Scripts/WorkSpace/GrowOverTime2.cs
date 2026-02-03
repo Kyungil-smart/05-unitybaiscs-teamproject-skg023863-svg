@@ -2,13 +2,13 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class GrowOverTime : AnomalyBase
+public class GrowOverTime2 : AnomalyBase
 {
     [Header("초당 성장")] 
-    [SerializeField] private Vector3 _scalePerSecond = new Vector3(0.02f, 0.02f, 0.02f);
+    [SerializeField] private Vector3 _scalePerSecond = new Vector3(0f, 0.01f, 0f);
 
     [Header("최대 크기 제한")] 
-    [SerializeField] private Vector3 _maxScale = new Vector3(10f, 7f, 10f);
+    [SerializeField] private Vector3 _maxScale = new Vector3(1f, 2f, 1f);
 
     private Coroutine _growthCoroutine;
     private Vector3 _originalLocalScale;
