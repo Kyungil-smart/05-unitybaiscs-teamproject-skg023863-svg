@@ -73,6 +73,8 @@
 - **플랫폼**: Windows  
 
 ---
+## 게임 발표 자료
+https://docs.google.com/presentation/d/1RBitFmKjwKsaPEFGbfbS6C8EkUov2NQro5DZkpUNWck/edit?slide=id.g3bcc573a0dd_7_0#slide=id.g3bcc573a0dd_7_0
 
 ## 협업 관리
 [노션 링크](https://www.notion.so/6-2f51c30b8ab380b59730e5f106caf2aa)
